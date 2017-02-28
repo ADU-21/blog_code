@@ -45,7 +45,8 @@ widgets:
       目前专注于：
 
       * AWS - 认证考试
-      * Cloud - 云计算
+      * Docker - 容器
+      * Serverless - 基于AWS的无服务架构实现
       * DevOps - 文化组织变革
       * CI/CD - 持续集成与持续交付
       * Agile - 敏捷文化
