@@ -88,7 +88,13 @@ ECS([EC2 Contianer Service](https://aws.amazon.com/ecs/))帮助管理在EC2上�
 
 > 注：该服务不算是AWS的核心服务，仅作为了解，考试内容不会涉及。
 
-##
+## Storage
+
+[AWS Storage](https://aws.amazon.com/products/storage/)包含了AWS存储有关的服务
+
+### S3
+
+S3([Simple Storage Service]())
 
 > * 参考资料
 > * [http://www.linuxnix.com/amazon-aws-regions-vs-availability-zones-vs-edge-locations-vs-data-centers/](http://www.linuxnix.com/amazon-aws-regions-vs-availability-zones-vs-edge-locations-vs-data-centers/)
