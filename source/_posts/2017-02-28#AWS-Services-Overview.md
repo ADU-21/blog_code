@@ -186,6 +186,32 @@ Elastic MapReduce，就是托管在AWS上的map reduce，用于管理大数据�
 
 为你的数据创建可视化面板。
 
+## Security & Identity
+
+### IAM
+
+IAM([Identity & Access Management](https://aws.amazon.com/iam/))是AWS的权限管理服务，是一个非常重要的服务。这个服务是免费的，而且Global，即不收Region限制的。
+关于IAM主要需要知道关于User Group, User, Role, Polic几个概念即可；User Group和User都类似于Linux中的用户组和用户的概念，不同的是AWS根据Polic赋予用户权限，关于Polic，主要就是规定可以对“何种资源”进行“何种操作”两个参数，Role的定义类似于User，但是Role不是赋予用户使用，而是赋予给AWS的资源的，例如租户需要创建一个EC2 instance，这个Instance需要操纵S3的资源，那么你需要在创建这个EC2 instance的时候赋予一个带S3操作权限的Role，需要注意的是Role只能在创建资源的时候被赋予，且不能更改不能解除绑定，另外在包含Role的instance中你无法看到AWS ACCESS KEY 之类的文本文件，这是AWS出于安全的设计。
+
+### Inspector
+
+[Inspector](https://aws.amazon.com/inspector/)是一个安装在EC2 instance上的客户端，用于生成安全报告。
+
+> 注：暂不在考试中出现
+
+### Certificate Manager1···
+
+[Certificate Manager](https://aws.amazon.com/certificate-manager/)是一个用于管理SSL证书的服务。
+
+### Directory Service
+
+[Directory Service](https://aws.amazon.com/directoryservice/)让租户可以将AWS权限管理和自建数据中的AD group集合在一起，可以直接使用Microsoft AD Group创建AWS中的资源。
+
+
+### WAF
+
+WAF([Web Application Firewall](https://aws.amazon.com/waf/))
+
 > * 参考资料
 > * [http://www.linuxnix.com/amazon-aws-regions-vs-availability-zones-vs-edge-locations-vs-data-centers/](http://www.linuxnix.com/amazon-aws-regions-vs-availability-zones-vs-edge-locations-vs-data-centers/)
 
