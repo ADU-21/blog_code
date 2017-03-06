@@ -199,7 +199,7 @@ IAM([Identity & Access Management](https://aws.amazon.com/iam/))是AWS的权限�
 
 > 注：暂不在考试中出现
 
-### Certificate Manager1···
+### Certificate Manager
 
 [Certificate Manager](https://aws.amazon.com/certificate-manager/)是一个用于管理SSL证书的服务。
 
@@ -210,7 +210,7 @@ IAM([Identity & Access Management](https://aws.amazon.com/iam/))是AWS的权限�
 
 ### WAF
 
-WAF([Web Application Firewall](https://aws.amazon.com/waf/))给予租户应用级别的安全防护，比如SQL注入，跨站攻击，等。
+WAF([Web Application Firewall](https://aws.amazon.com/certificate-manager.com/waf/))给予租户应用级别的安全防护，比如SQL注入，跨站攻击，等。
 
 ### Artifact
 
