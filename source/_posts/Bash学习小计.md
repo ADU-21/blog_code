@@ -1,7 +1,7 @@
 ---
 title: Bash学习小计
 date: 2016-08-05 08:09:15
-tags: [Linux, 小计]
+tags: [Linux, Shell, 小计]
 ---
 最近一段时间在学习bash，作为一个小总结，记录一些bash使用的技巧以及知识点。
 # Shell是什么？
