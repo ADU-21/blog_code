@@ -71,6 +71,9 @@ baidu_analytics: b72da5a0d7b5ced639a01a28390e0e64
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+- type: git
   repo: https://github.com/ADU-21/ADU-21.github.io.git
   branch: master
+- type: s3
+  bucket: www.duyidong.com
+  region: ap-northeast-1
