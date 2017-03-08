@@ -43,25 +43,32 @@ S3是AWS一个对象存储服务，拥有11个9的耐久度和3个9的可用性�
 这里需要一个只有对www.duyidong.com这个bucket有上传权限的用户，首先要创建Policy，这里要用到Policy Generator。
  - 进入**IAM -> Policies -> Create Policy -> Policy Generator**
  - 选择S3的PutObject Action, ARN为目标Bucket的ARN，届时会生成如下Policy:
+> 注：经笔者反复试错，再参照[官方文档](http://docs.aws.amazon.com/AmazonS3/latest/dev/example-policies-s3.html)，最终确定User Policy需要以下权限：
 
  ```
- {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "Stmt1488877494000",
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject"
-            ],
-            "Resource": [
-                "arn:aws:s3:::www.duyidong.com*"
-            ]
-        }
-    ]
+{
+   "Version":"2012-10-17",
+   "Statement":[
+      {
+         "Effect":"Allow",
+         "Action":[
+            "s3:ListBucket",
+            "s3:GetBucketLocation"
+         ],
+         "Resource":"arn:aws:s3:::www.duyidong.com"
+      },
+      {
+         "Effect":"Allow",
+         "Action":[
+            "s3:PutObject",
+            "s3:GetObject",
+            "s3:DeleteObject"
+         ],
+         "Resource":"arn:aws:s3:::www.duyidong.com/*"
+      }
+   ]
 }
  ```
-> 注：ARN需使用```arn:aws:s3:::www.duyidong.com*```
 
 #### 创建用户组
 
