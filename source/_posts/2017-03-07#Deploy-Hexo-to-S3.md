@@ -130,3 +130,4 @@ deploy:
 > * 参考资料: 
 > * [https://hexo.io/docs/deployment.html](https://hexo.io/docs/deployment.html)
 > * [http://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/](http://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/)
+> * [http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
