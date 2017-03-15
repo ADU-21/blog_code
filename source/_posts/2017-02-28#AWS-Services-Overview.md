@@ -13,7 +13,7 @@ tags: AWS
 
 以下服务会出现在助理级架构师考试中：
 
-![](images/AWS_Services_Exam.png)
+![](/images/AWS_Services_Exam.png)
 
 下面就按照这个顺序过一下AWS的众多服务。
 

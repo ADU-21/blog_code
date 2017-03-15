@@ -131,3 +131,5 @@ deploy:
 > * [https://hexo.io/docs/deployment.html](https://hexo.io/docs/deployment.html)
 > * [http://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/](http://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/)
 > * [http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
+> * [https://aws.amazon.com/s3/storage-classes/](https://aws.amazon.com/s3/storage-classes/)
+> * [https://aws.amazon.com/s3/reduced-redundancy/](https://aws.amazon.com/s3/reduced-redundancy/)
