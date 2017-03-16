@@ -3,4 +3,4 @@ title: 关于作者
 permalink: about/
 ---
 
-working in progress..
+一个很帅的男人。
