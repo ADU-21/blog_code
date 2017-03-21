@@ -1,7 +1,7 @@
 ---
 title: Deploy Hexo to S3
 date: 2017-03-07 17:42:34
-tags: [AWS, S3]
+tags: [AWS, S3, Blog]
 ---
 # 将Hexo博客发布到S3
 
@@ -126,6 +126,10 @@ deploy:
 - type: heroku
   repo:
 ```
+
+## 后续
+
+要使用自己的域名，开启HTTPS，使用AWS的CND，参照：[使用AWS开启HTTPS和CDN]()
 
 > * 参考资料: 
 > * [https://hexo.io/docs/deployment.html](https://hexo.io/docs/deployment.html)

@@ -29,7 +29,7 @@ right_menus:
 ## Banners && Widgets
 banners:
   jade: |
-    a(href='http://www.duyidong.com') 小广告旗帜~~
+    a(href='https://www.duyidong.com') 小广告旗帜~~
 
 widgets:
   -
