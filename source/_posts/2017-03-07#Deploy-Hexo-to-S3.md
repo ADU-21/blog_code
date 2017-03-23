@@ -14,9 +14,9 @@ S3是AWS一个对象存储服务，拥有11个9的耐久度和3个9的可用性�
 ## 第一步：创建一个Bucket
 
  - 进入S3界面，点击**CreateBucket**，取名为www.duyidong.com
- - 选择一个Region，你可以在[这里](http://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html)找到延迟最低的Region用于存放你的博客
+ - 选择一个Region，你可以在[这里](https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html)找到延迟最低的Region用于存放你的博客
  - 设置Policy，确保外部可访问：
- 
+
  ```
  {
     "Version": "2012-10-17",
@@ -32,9 +32,9 @@ S3是AWS一个对象存储服务，拥有11个9的耐久度和3个9的可用性�
 }
  ```
  > 注： ```arn:aws:s3:::www.duyidong.com/*```为bucket里对象的资源标识符
- 
+
  - 在**Properties**下开启**Static website hosting**，设置入口文件为```index.html```，404页面为```404/index.html```
- 
+
 
 ## 第二步：创建一个用于上传静态文件的用户
 
@@ -43,7 +43,7 @@ S3是AWS一个对象存储服务，拥有11个9的耐久度和3个9的可用性�
 这里需要一个只有对www.duyidong.com这个bucket有上传权限的用户，首先要创建Policy，这里要用到Policy Generator。
  - 进入**IAM -> Policies -> Create Policy -> Policy Generator**
  - 选择S3的PutObject Action, ARN为目标Bucket的ARN，届时会生成如下Policy:
-> 注：经笔者反复试错，再参照[官方文档](http://docs.aws.amazon.com/AmazonS3/latest/dev/example-policies-s3.html)，最终确定User Policy需要以下权限：
+> 注：经笔者反复试错，再参照[官方文档](https://docs.aws.amazon.com/AmazonS3/latest/dev/example-policies-s3.html)，最终确定User Policy需要以下权限：
 
  ```
 {
@@ -129,11 +129,11 @@ deploy:
 
 ## 后续
 
-要使用自己的域名，开启HTTPS，使用AWS的CND，参照：[使用AWS开启HTTPS和CDN]()
+要使用自己的域名，开启HTTPS，使用AWS的CND，参照：[使用AWS解锁HTTPS和CDN](https://www.duyidong.com/2017/03/20/Enable-HTTPS-and-CDN-with-Cloudfront/)
 
-> * 参考资料: 
+> * 参考资料:
 > * [https://hexo.io/docs/deployment.html](https://hexo.io/docs/deployment.html)
-> * [http://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/](http://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/)
-> * [http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html](http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
+> * [https://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/](https://inject.coffee/hexo-travis-s3-part-2-deploying-to-aws/)
+> * [https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html](https://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html)
 > * [https://aws.amazon.com/s3/storage-classes/](https://aws.amazon.com/s3/storage-classes/)
 > * [https://aws.amazon.com/s3/reduced-redundancy/](https://aws.amazon.com/s3/reduced-redundancy/)

@@ -1,12 +1,12 @@
 ---
-title: Enable HTTPS ann CDN with Cloudfront
+title: Enable HTTPS and CDN with Cloudfront
 date: 2017-03-20 20:23:37
 tags: [AWS, Blog, HTTPS, CDN, Cloudfront, Route53]
 ---
 
-# 使用AWS开启HTTPS和CDN
+# 使用AWS解锁HTTPS和CDN
 
-在上一篇博客中，笔者已经介绍了[将hexo博客发布到S3](https://www.duyidong.com/2017/03/07/Deploy-Hexo-to-S3/)，这一部分笔者将介绍如何使用AWS的Route53应用上自己的域名，以及如何使用Cloudfront开启HTTPS/HTTP2和CDN加速。
+在上一篇博客中，笔者已经介绍了[将hexo博客发布到S3](https://www.duyidong.com/2017/03/07/Deploy-Hexo-to-S3/)，这一部分我将介绍如何使用AWS的Route53应用上自己的域名，以及如何使用Cloudfront开启HTTPS/HTTP2和CDN加速。
 
 ## 关于Route53
 
@@ -21,7 +21,7 @@ Route53是AWS提供的DNS服务，提供常见域名服务，用户可以使用R
 ## 关于Cloudfront
 
 Cloudfront是AWS的CND服务，利用AWS分布在全球的节点服务器（Edge Location）缓存用户的访问，用户在第二次访问（或同区域的另一个用户在非首次访问）页面时会直接从节点服务器取到已经缓存的数据，速度会大大加快。
-同理，Cloudfront也可以用于问文件上传。
+同理，Cloudfront也可以用于文件上传。
 
 ## 申请Route53和Cloudfront权限
 
@@ -64,9 +64,9 @@ Cloudfront是AWS的CND服务，利用AWS分布在全球的节点服务器（Edge
 > * 注意：Cloudfront的配置每次更改都需要从新部署，每次重新部署都需要大约半小时时间，为了避免不必要的时间浪费，最好是一次配置成功，不然真的很痛苦。。
 > * 另外，关于Cloudfront的日志，AWS不会针对日志功能进行收费，但用户需要对占用的S3 bucket存储和访问付费，日志内容大概和Nginx的access.log差不多，个人觉得AWS的[Reports & Analytics](https://console.aws.amazon.com/cloudfront/home#cache_stat_reports)已经做得很好了，日志有些多余，建议可以在学习完后关闭。
 
-### 关于缓存
+### 关于缓存时间
 
-关于S3里的Object在Cloudfront的各节点缓存的时间，默认为24小时，也就是说当我发布一篇新博客，由于主页index.html名字没有变化，只是更新了新版本，我要等到24小时后旧版本过期才能看到新的页面，这对我的小博客来说时间太长了，需要更改这个Cache时间，更改Cache时间有两种方式，一是更改TTL（Time To Live）时间，二是增加```Cache-Control: max-age=[seconds]```的heaeder，关于第二种方式，具体参见[官方文档](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#expiration-individual-objects)，这里我说一下如何更改TTL：
+关于S3里的Object在Cloudfront的各节点缓存的时间，默认为24小时，也就是说当我发布一篇新博客，由于主页index.html名字没有变化，只是更新了新版本，我要等到24小时后旧版本过期才能看到新的页面，这对我的小博客来说时间太长了，需要更改这个Cache时间，更改Cache时间有两种方式，一是更改TTL（Time To Live）时间，二是增加```Cache-Control: max-age=[seconds]```的heaeder，关于第二种方式，具体参见[官方文档](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#expiration-individual-objects)，这里我说一下如何更改TTL：
 进入Distribution的管理员界面，选择**Behaviors**标签，勾选待编辑的Behavior，点选**Edit**
 
 ![](/images/Cloudfront_Distributions_Behaviors.png)
@@ -74,7 +74,17 @@ Cloudfront是AWS的CND服务，利用AWS分布在全球的节点服务器（Edge
 在Edit Behavior页面Object Caching项目勾选**Customize**自定义TTL，将Default TTL改为3600（1小时）点选**Yes，Edit**即可。
 同样，更新配置要等待半小时左右方能生效。
 
-> * 参见 [Specifying How Long Objects Stay in a CloudFront Edge Cache (Expiration)](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+> * 参见 [Specifying How Long Objects Stay in a CloudFront Edge Cache (Expiration)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+
+#### 首页缓存时间
+
+更改TTL后，首页的更新也需要一个小时，对大部分情况来说这个时间还是比较长，这个时候可以通过更改S3的Bucket里面的Object的Metadata的方式增加```Cache-Control```的Header来进一步减少首页的Cache时间。
+
+![](/images/Cloudfront_S3_Metadata.png)
+
+> * 这个手动的设置会在每次Deploy的时候被覆盖，所以需要给Deploy插件增加Update Metadata/Header的设置。
+
+### 如何清除缓存
 
 ## 配置Route53
 
@@ -98,6 +108,6 @@ Cloudfront是AWS的CND服务，利用AWS分布在全球的节点服务器（Edge
 
 
 > * 参考资料
-> * [http://www.huangbowen.net/blog/2013/10/01/migrate-octopress-to-aws-step-2/](http://www.huangbowen.net/blog/2013/10/01/migrate-octopress-to-aws-step-2/)
-> * [http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html](http://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html)
-> * [http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
+> * [https://www.huangbowen.net/blog/2013/10/01/migrate-octopress-to-aws-step-2/](https://www.huangbowen.net/blog/2013/10/01/migrate-octopress-to-aws-step-2/)
+> * [https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html)
+> * [https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html)
