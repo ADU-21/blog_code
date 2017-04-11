@@ -1,6 +1,7 @@
 ## Services
 google_analytics: 'UA-80279850-1'
 duoshuo: duuyidong
+#disqus_shortname: www-duyidong-com
 
 ## Meta
 # rss: https://jysperm.me/atom.xml

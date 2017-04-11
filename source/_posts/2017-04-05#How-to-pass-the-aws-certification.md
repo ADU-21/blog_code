@@ -68,3 +68,4 @@ AWS方案解决架构师助理级的考试总的来说难度不大，主要考�
 >  - [http://www.jianshu.com/p/02233ae66b80](http://www.jianshu.com/p/02233ae66b80)
 > * Jayendra的博客：[http://jayendrapatil.com/](http://jayendrapatil.com/)
 > * Youtube上deep dive的视频：[https://www.youtube.com/results?search_query=aws+deep+dive](https://www.youtube.com/results?search_query=aws+deep+dive)
+> * AWS官方教学小视频： <https://aws.amazon.com/training/intro_series/>
