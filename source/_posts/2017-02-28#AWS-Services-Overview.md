@@ -1,10 +1,12 @@
 ---
 title: AWS Services Overview
 date: 2017-02-28 14:55:01
-tags: AWS
+tags:
+ - AWS
+ - 云计算
 ---
 
-# AWS Services Overview
+# Amazon Web Server 服务概览
 
 最近在准备AWS助理级架构师认证考试，借此机会梳理一下AWS比较核心的几个服务，不会太深入细节，只做简单阐释。
 首先关于AWS服务一览：

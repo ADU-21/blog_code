@@ -1,7 +1,9 @@
 ---
 title: 程序员入门之git
 date: 2016-05-29 10:49:08
-tags: 工具
+tags:
+ - 工具
+ - 版本管理
 ---
 # 代码版本管理工具
 在生产环境下的开发过程中，一个工程的代码通常是有多个程序员协同完成，这就涉及到代码在不通终端的同步问题，基于此需求，我们产生了代码版本工具，目前比较主流的两种为git和SVN
@@ -17,7 +19,7 @@ git是Linux的创始人Linus于2005年花了大概两周时间用C语言编写�
 ### 安装
 在控制台输入git 如果弹出提示信息，则跳过此步骤
 
-#### mac 
+#### mac
 
 可以使用homebrew安装
 
@@ -83,7 +85,7 @@ git reset --hard HEAD^ 会退到上一版本
 git reset --hard <commit_id> 会退到指定版本
 ```
 
-撤销工作区修改：	
+撤销工作区修改：
 
 ```
 git checkout -- file
@@ -116,7 +118,7 @@ git branch <name>  # 创建分支
 git checkout <name> # 切换分支
 git checkout -b <name> # 创建并切换分支
 git merge <name> #合并某分支到当前分支
-git branch -d <name> # 删除分支 
+git branch -d <name> # 删除分支
 git branch -D <name> # 强行删除分支
 ```
 
@@ -131,7 +133,7 @@ git log --graph
 在git中可以通过编辑.gitignore 文件达到控制忽略文件类型的目的，当文件自动不被add 到仓库里。
 忽略的语法规则：
 (#)表示注释
-(*)  表示任意多个字符; 
+(*)  表示任意多个字符;
 (?) 代表一个字符;
  ([abc]) 代表可选字符范围
 如果名称最前面是路径分隔符 (/) ，表示忽略的该文件在此目录下。
@@ -143,7 +145,7 @@ git log --graph
 # 这行是注释
 *.a   # 忽略所有 .a 伟扩展名的文件
 !lib.a   # 但是 lib.a 不忽略，即时之前设置了	忽略所有的 .a
-/TODO   # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略 
+/TODO   # 只忽略此目录下 TODO 文件，子目录的 TODO 不忽略
 build/    # 忽略所有的 build/ 目录下文件
 doc/*.txt    # 忽略如 doc/notes.txt, 但是不忽略如 doc/server/arch.txt
 ```

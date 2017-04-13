@@ -1,7 +1,7 @@
 ---
 title: Bash学习小计
 date: 2016-08-05 08:09:15
-tags: [Linux, Shell, 小计]
+tags: [Linux, Shell, 小计, 学习]
 ---
 最近一段时间在学习bash，作为一个小总结，记录一些bash使用的技巧以及知识点。
 # Shell是什么？
@@ -36,7 +36,7 @@ Control键是所有类Unix系统（Mac, Linux）下一个非常有用的按键�
  > * Control-N 光标下移（效果同下方向键）
  > * Control-A 光标移动到行首
  > * Control-E 光标移动到行尾
- 
+
  删除类
 
  > * Control-D 删除光标后面的一个字符
@@ -83,7 +83,7 @@ history可以查看当前用户的历史命令，每个用户的history藏在~/.
 	这两种方式是相同的，即重新打开一个shell执行完退出，并使用返回值代替脚本调用部分内容
 2. | xargs 区别于管道符，是将前面的命令作为后面命令的命令参数，而管道符是将前面输出作为后面命令的标准输入。
 	再解释一 | 和 | xargs 的区别：
-	
+
 	```
 	echo -l | ls 输出： 等同于 ls
 	echo -l | xargs ls 输出 等同于 ls -l
@@ -122,7 +122,7 @@ export HISTSIZE=10000
 首先：`sudo -i` 是以root身份新开一个shell，`sudo -u <user> <command>`是以user身份执行command，现在我要说一条神奇的命令：
 
 ```
-sudo -iu <user> 
+sudo -iu <user>
 ```
 它等价于`sudo -u root <user_shell>`
 是不是很神奇？
@@ -171,7 +171,7 @@ echo "$s""_ops"
 eval echo \$"$s"_ops "$name"
 
 ```
-运行 ./test.sh world 
+运行 ./test.sh world
 打印出hello word
 
 **但是！！**我现在要说的是请不要使用这种方式，因为邪恶的eval会引起bash注入的问题，就提示到这里，剩下的自己感受。。

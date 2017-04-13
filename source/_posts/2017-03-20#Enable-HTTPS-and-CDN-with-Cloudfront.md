@@ -1,7 +1,7 @@
 ---
 title: Enable HTTPS and CDN with Cloudfront
 date: 2017-03-20 20:23:37
-tags: [AWS, Blog, HTTPS, CDN, Cloudfront, Route53]
+tags: [AWS, Blog, HTTPS, CDN, Cloudfront, Route53, 博客上云]
 ---
 
 # 使用AWS解锁HTTPS和CDN

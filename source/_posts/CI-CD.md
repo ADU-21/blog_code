@@ -12,7 +12,7 @@ For this purpose, they created with CI and CD as the core of agile development.
 <!-- more -->
 ## Continuous Integration(CI)
 
-Continuous Integration means you need to integration at least daily, It's a development practice that requires developers to integrate code into a shared repository several times a day."Shared"" means everyone can see what others working on, Frequently compile, test, commit means every times we commit, the code could be running, ideally, every integration should be automated, the unit-test allowing teams to detect problems early. By integration regularly, you can detect errors quickly, and locate them more easily.  
+Continuous Integration means you need to integration at least daily, It's a development practice that requires developers to integrate code into a shared repository several times a day."Shared"" means everyone can see what others working on, Frequently compile, test, commit means every times we commit, the code could be running, ideally, every integration should be automated, the unit-test allowing teams to detect problems early. By integration regularly, you can detect errors quickly, and locate them more easily.
 there are many advantages for Continuous Integration, one of which is the continuous delivery.
 
 ## Continuous Delivery(CD)

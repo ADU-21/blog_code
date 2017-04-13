@@ -1,7 +1,7 @@
 ---
 title: Ansible学习小记
 date: 2016-06-15 20:30:46
-tags: [DevOps, 工具]
+tags: [基础设设施即代码, DevOps, 工具, Ansible, 自动化运维]
 ---
 # Ansible是什么
 借助官网上的一句话，ansible is a simple IT automation, 即ansible 是用于IT自动化管理的一个工具
@@ -63,7 +63,7 @@ task是通过调用ansible模块的方式，在远程设备上执行命令来实
 ```
 -name: install npm
  sudo: yes
- yum: 
+ yum:
  	name: npm
  	state: present
 ```

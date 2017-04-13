@@ -1,5 +1,5 @@
 ---
-title: 所有日志
+title: 日志列表
 permalink: list/
 ---
 

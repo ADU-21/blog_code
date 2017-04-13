@@ -1,7 +1,7 @@
 ---
 title: AWS well architected framework
 date: 2017-03-23 22:01:23
-tags: [AWS, Cloud Native]
+tags: [AWS, Cloud Native, 架构, 上云]
 ---
 # AWS认为，什么样的架构是一个良好的架构
 
@@ -49,7 +49,7 @@ AWS从五大支柱来判定一个架构设计得是否优秀：
  - 关注在你的系统安全：根据AWS的责任划分模型，关注在用户应该负责的系统安全和数据安全层面
 ![](https://d0.awsstatic.com/security-center/NewSharedResponsibilityModel.png)
  - 自动化安全最佳实践：使用基于应用层的策略保证安全问题能够被快速修复，例如，创建打好补丁的镜像，然后让所有之后创建的instance使用这个镜像；再例如，对常见安全问题自动响应和自动修复故障
- 
+
 ### 定义
 
 AWS将最佳实践划分为五个范畴：
@@ -61,7 +61,7 @@ AWS将最佳实践划分为五个范畴：
  - 事件响应
 
 在设计你的架构之前，你需要知道谁可以对你的系统做什么，此外，你还希望确定判断每个发生在系统的事件是否安全，保护你的操作系统和服务，你需要维护和保密你的数据，你还需要做到系统对安全事件能够自动响应。
- 
+
 ### 最佳实践
 
 #### 数据保护
@@ -124,7 +124,7 @@ AWS将最佳实践划分为五个范畴：
  - 权限管理：IAM, MFA
  - 架构保护：VPC, NCL, SG
  - 追踪控制：CloudTrail, Config, CloudWatch
- 
+
 ## 可靠性（Reliability Pillar）
 
 ### 设计原则
@@ -244,7 +244,7 @@ AWS将最佳实践划分为五个范畴：
  - 有效利用资源：对于EC2，申请预留实例以减少开销，使用 AWS Trusted Advisor 找到可以减少花费的方式
  - 贴近业务需求：Auto Scaling
  - 支出意识：CloudWatch用于监控花费情况，SNS用于提示超出预算的花费
- - 随时优化：[AWS Blog](https://aws.amazon.com/blogs/aws/)和[AWS What’s New section](https://aws.amazon.com/new/)以及 AWS Trusted Advisor 
+ - 随时优化：[AWS Blog](https://aws.amazon.com/blogs/aws/)和[AWS What’s New section](https://aws.amazon.com/new/)以及 AWS Trusted Advisor
 
 ## 运维出色（Operational Excellence Pillar）
 

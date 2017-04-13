@@ -1,7 +1,7 @@
 ---
 title: AWS之CloudFormation
 date: 2016-08-02 21:36:04
-tags: [AWS, DevOps]
+tags: [AWS, DevOps, 基础设施即代码]
 
 ---
 
