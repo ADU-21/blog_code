@@ -29,6 +29,7 @@ permalink: list/
 ## 工具 & 技术
 
 * [Vim学习小计](https://www.duyidong.com/2017/02/24/vim%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%A1/) - Linux实用编辑工具介绍
+* [基础设施代码测试](https://www.duyidong.com/2017/04/13/Infrastructure-as-Code-Testing/) - Testinfra & Molecule 基础设施代码测试工具介绍
 
 ## 学习总结
 
