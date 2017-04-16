@@ -137,14 +137,15 @@ $ molecule test
 
 ![](/images/Molecule_Test_Success.png)
 
-第一次运行速度比较慢，因为运行ansible需要到Docker镜像仓库拉取一个Ubuntu的镜像，可以从Log里看出，整个测试过程包含如下步骤：
+第一次运行速度比较慢，因为运行Ansible需要到Docker镜像仓库拉取一个Ubuntu的镜像，可以从Log里看出，整个测试过程包含如下步骤：
 
  - 从基础镜像（Ubuntu）创建一个测试需要的镜像（docker image）
  - 从镜像启动一个测试运行需要的容器（docker container）
- - 运行测试
- - 停止并删除容器
+ - 开始测试，运行playbook
+ - 使用Testinfra判断准备环境是否正确
+ - 测试完毕，停止并删除容器
 
-整个过程容器的创建和销毁并没有占用很多时间，和跑一个ansible时间相差不多。
+整个过程容器的创建和销毁并没有占用很多时间，和跑一个Ansible时间相差不多。
 
 ### 配置文件
 
@@ -172,7 +173,7 @@ verifier:
 
 关于测试内容的定义，看一下```test/test_default.py```文件：
 
-{% codeblock lang:python %}
+```
 import testinfra.utils.ansible_runner
 
 testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
@@ -185,5 +186,26 @@ def test_hosts_file(File):
     assert f.exists
     assert f.user == 'root'
     assert f.group == 'root'
-{% codeblock %}
+```
+简单看来就是利用Testinfra看了下/etc/hosts是否存在，所属用户和所属组是否为root
 
+### Molecule评价
+
+与其说Molecule是一个新的Ansible测试工具不如说是一种组合docker，Testinfra和Ansible的测试方法，换总说法它并不是一个集成在Ansible之中的更细粒度的测试方法，而是高于Ansible的更适合于放在Pipeline中作为测试Ansible运行最终结果的一个工具集，其效果大致和运行```docker run XXX ansible```之后再运行```Testinfra -v```两行shell命令是一样的
+
+#### 优点
+
+ - 开始关注自动化配置脚本的测试，不失为一种尝试
+ - 使用Docker作为引擎，速度还可以
+ - 能够提升更改Ansible脚本后的构建信心
+
+#### 缺点
+
+ - 仍然要运行完Playbook才能看到结果，并没有解决**反馈不及时**的痛点
+ - 不支持细粒度的测试，且对一个playbook使用不同参数构建不同环境的应用场景也没有很好的支持
+ - 不管是使用Docker还是Vagrant，都增加了*空间*的消耗，且增加了*知识成本*
+
+## 综上所述
+
+随着DevOps的普及，已经有人开始关注基础设施代码测试这一块的工作，但这些测试工具还在初级阶段，反馈不能及时，增加覆盖面的成本也还较高，且不能很好地与云环境结合。
+由于在软件开发中基础设施对业务价值的贡献并不明显，提升Ops技能与其说能过帮助公司挣钱不如说是帮公司省钱；而且在大部分项目中基础设施变更并没有那么频繁，紧急的问题通常还是由Ops（或者是被称为DevOps的一个角色）手动来解决，这种现象在国内公司尤其明显。大家对DevOps的认识还没有达到不一致，DevOps中的测试也还没有被定义清楚，基础设施代码的测试，还有很长的路要走。
