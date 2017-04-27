@@ -4,7 +4,7 @@ duoshuo: duuyidong
 #disqus_shortname: www-duyidong-com
 
 ## Meta
-# rss: https://jysperm.me/atom.xml
+rss: https://www.duyidong.com/atom.xml
 favicon: /favicon.png
 icon: /favicon.png
 source_url: 'https://github.com/ADU-21/blog'
@@ -22,7 +22,7 @@ menus:
   '简历': /resume
 
 right_menus:
-  #'RSS': /atom.xml
+  'RSS': /atom.xml
   'Fork on Github':
     target: '_blank'
     href: 'https://github.com/ADU-21/blog'
