@@ -5,7 +5,12 @@ permalink: booklist/
 
 # 技术
 
-## 架构
+## 架构 & DevOps
+
+ - [Infrastructure as Code](https://www.safaribooksonline.com/library/view/infrastructure-as-code/9781491924334/) - Kief Morris 著
+
+     本书作为基础设施即代码的学习。
+
  - [大型网站技术架构：核心原理与案例分析](https://item.jd.com/11322972.html) - 李智慧 著
 
     本书是参与阿里巴巴基础技术平台开发和www.alibaba.com架构设计的作者写的，很接地气，不需要很多的技术积累也能看懂，核心论点是“网站的架构是演变出来的而不是设计出来的”，对于网站架构设计入门，是本好材料。
