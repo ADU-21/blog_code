@@ -1,13 +1,16 @@
 ---
 title: Redis、Memcache、MongoDB性能总结
 date: 2016-04-03 21:03:55
+categories:
+- 学习总结
 tags: DataBase
 ---
 # Redis、Memcache、MongoDB有哪些区别？
+<!-- more -->
 ## Memcached
 ### Memcached的优点：
 Memcached可以利用多核优势，单实例吞吐量极高，可以达到几十万QPS（取决于key、value的字节大小以及服务器硬件性能，日常环境中QPS高峰大约在4-6w左右）。适用于最大程度扛量。
-<!-- more -->
+
 支持直接配置为session handle。
 坑少。
 ### Memcached的局限性：

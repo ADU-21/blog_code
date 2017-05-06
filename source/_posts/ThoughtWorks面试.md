@@ -1,11 +1,13 @@
 ---
 title: ThoughtWorks面试
 date: 2016-04-20 21:38:11
+categories:
+- ThoughtWorks
 tags: [ThoughtWorks, 面试]
 ---
 今天是2016年4月20日
-
 地点在成都武侯区的一间电梯公寓
+
 <!-- more -->
 两个小时前，我的心情还无比地紧张。
 

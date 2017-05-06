@@ -1,11 +1,14 @@
 ---
 title: AWS助理架构师认证考经
 date: 2017-04-05 14:48:45
+categories:
+- Amazon Web Services
 tags:
  - AWS
  - 云计算认证
  - Certification
  - AWS认证考试
+ - 学习
 ---
 
 上周去参加了AWS助理级架构师的考试并顺利通过，是2017年的第一个小目标也是对云服务知识的一个检验，在此分享一下考试的经过和经验。

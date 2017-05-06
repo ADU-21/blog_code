@@ -1,15 +1,18 @@
 ---
 title: Python代码优化小技巧
 date: 2016-03-29 20:26:33
+categories:
+- 学习总结
 tags: [Python, 代码]
 ---
-# python代码优化小技巧
+
 一个良好的算法能够对性能起到关键作用，因此性能改进的首要点是对算法的改进。在算法的时间复杂度排序上依次是：
 
 >  O(1) -> O(lg n) -> O(n lg n) -> O(n^2) -> O(n^3) -> O(n^k) -> O(k^n) -> O(n!)
-
-因此如果能够在时间复杂度上对算法进行一定的改进，对性能的提高不言而喻。但对具体算法的改进不属于本文讨论的范围，读者可以自行参考这方面资料。下面的内容将集中讨论数据结构的选择。
+> 
 <!-- more -->
+因此如果能够在时间复杂度上对算法进行一定的改进，对性能的提高不言而喻。但对具体算法的改进不属于本文讨论的范围，读者可以自行参考这方面资料。下面的内容将集中讨论数据结构的选择。
+
 ## 字典 (dictionary) 与列表 (list)
 Python 字典中使用了 hash table，因此查找操作的复杂度为 O(1)，而 list 实际是个数组，在 list 中，查找需要遍历整个 list，其复杂度为 O(n)，因此对成员的查找访问等操作字典要比 list 更快。
 
@@ -17,21 +20,21 @@ Python 字典中使用了 hash table，因此查找操作的复杂度为 O(1)，
 清单 1. 代码 dict.py
 
 ``` python
-from time import time 
- t = time() 
- list = ['a','b','is','python','jason','hello','hill','with','phone','test', 
-'dfdf','apple','pddf','ind','basic','none','baecr','var','bana','dd','wrd'] 
- #list = dict.fromkeys(list,True) 
+from time import time
+ t = time()
+ list = ['a','b','is','python','jason','hello','hill','with','phone','test',
+'dfdf','apple','pddf','ind','basic','none','baecr','var','bana','dd','wrd']
+ #list = dict.fromkeys(list,True)
  print list
- filter = [] 
- for i in range (1000000): 
-     for find in ['is','hat','new','list','old','.']: 
-         if find not in list: 
-             filter.append(find) 
+ filter = []
+ for i in range (1000000):
+     for find in ['is','hat','new','list','old','.']:
+         if find not in list:
+             filter.append(find)
  print("total run time:")
  print(time()-t)
  ```
- 
+
 上述代码运行大概需要 16.09seconds。如果去掉行 #list = dict.fromkeys(list,True) 的注释，将 list 转换为字典之后再运行，时间大约为 8.375 seconds，效率大概提高了一半。因此在需要多数据成员进行频繁的查找或者访问的时候，使用 dict 而不是 list 是一个较好的选择。
 ## 集合 (set) 与列表 (list)
 set 的 union， intersection，difference 操作要比 list 的迭代要快。因此如果涉及到求 list 交集，并集或者差的问题可以转换为 set 来操作。
@@ -39,38 +42,38 @@ set 的 union， intersection，difference 操作要比 list 的迭代要快。�
 
 清单 2. 求 list 的交集：
 ``` python
-from time import time 
-t = time() 
-lista=[1,2,3,4,5,6,7,8,9,13,34,53,42,44] 
-listb=[2,4,6,9,23] 
-intersection=[] 
-for i in range (1000000): 
-    for a in lista: 
-        for b in listb: 
-            if a == b: 
-                intersection.append(a) 
+from time import time
+t = time()
+lista=[1,2,3,4,5,6,7,8,9,13,34,53,42,44]
+listb=[2,4,6,9,23]
+intersection=[]
+for i in range (1000000):
+    for a in lista:
+        for b in listb:
+            if a == b:
+                intersection.append(a)
 print("total run time:")
 print (time()-t)
 ```
 上述程序的运行时间大概为：
 
- 	total run time: 
+ 	total run time:
  	38.4070000648
 
 清单 3. 使用 set 求交集
 ``` python
-from time import time 
-t = time() 
-lista=[1,2,3,4,5,6,7,8,9,13,34,53,42,44] 
-listb=[2,4,6,9,23] 
-intersection=[] 
-for i in range (1000000): 
-    list(set(lista)&set(listb)) 
+from time import time
+t = time()
+lista=[1,2,3,4,5,6,7,8,9,13,34,53,42,44]
+listb=[2,4,6,9,23]
+intersection=[]
+for i in range (1000000):
+    list(set(lista)&set(listb))
 print("total run time:")
 print(time()-t)
 ```
-改为 set 后程序的运行时间缩减为 8.75，提高了 4 倍多，运行时间大大缩短。读者可以自行使用表 1 其他的操作进行测试。 
-表 1. set 常见用法 
+改为 set 后程序的运行时间缩减为 8.75，提高了 4 倍多，运行时间大大缩短。读者可以自行使用表 1 其他的操作进行测试。
+表 1. set 常见用法
 语法	操作	说明
 
 	set(list1) | set(list2)	union	包含 list1 和 list2 所有数据的新集合
@@ -79,13 +82,13 @@ print(time()-t)
 
 清单 4. 利用 Lazy if-evaluation 的特性
 ``` python
-from time import time 
-t = time() 
-abbreviations = ['cf.', 'e.g.', 'ex.', 'etc.', 'fig.', 'i.e.', 'Mr.', 'vs.'] 
-for i in range (1000000): 
-    for w in ('Mr.', 'Hat', 'is', 'chasing', 'the', 'black', 'cat', '.'): 
-        if w in abbreviations: 
-        #if w[-1] == '.' and w in abbreviations: 
+from time import time
+t = time()
+abbreviations = ['cf.', 'e.g.', 'ex.', 'etc.', 'fig.', 'i.e.', 'Mr.', 'vs.']
+for i in range (1000000):
+    for w in ('Mr.', 'Hat', 'is', 'chasing', 'the', 'black', 'cat', '.'):
+        if w in abbreviations:
+        #if w[-1] == '.' and w in abbreviations:
             pass
 print("total run time:")
 print(time()-t)
@@ -99,14 +102,14 @@ python 中的字符串对象是不可改变的，因此对任何字符串的操�
 
 清单 5. 使用 join 而不是 + 连接字符串
 ``` python
-from time import time 
+from time import time
 
-t = time() 
+t = time()
 s = ""
-list = ['a','b','b','d','e','f','g','h','i','j','k','l','m','n'] 
-for i in range (10000): 
-    for substr in list: 
-        s+= substr     
+list = ['a','b','b','d','e','f','g','h','i','j','k','l','m','n']
+for i in range (10000):
+    for substr in list:
+        s+= substr
 print("total run time:")
 print(time()-t)
 ```
@@ -114,12 +117,12 @@ print(time()-t)
 同时要避免：
 ``` python
 s = ""
-for x in list: 
+for x in list:
    s += func(x)
 ```
-而是要使用： 
+而是要使用：
 ``` python
-slist = [func(elt) for elt in somelist] 
+slist = [func(elt) for elt in somelist]
 s = "".join(slist)
 ```
 当对字符串可以使用正则表达式或者内置函数来处理的时候，选择内置函数。如 str.isalpha()，str.isdigit()，str.startswith(('x', 'yz'))，str.endswith(('x', 'yz'))
@@ -136,10 +139,10 @@ out = "<html>" + head + prologue + query + tail + "</html>"
 
 如果需要交换两个变量的值使用 a,b=b,a 而不是借助中间变量 t=a;a=b;b=t；
 ``` python
->>> from timeit import Timer 
->>> Timer("t=a;a=b;b=t","a=1;b=2").timeit() 
+>>> from timeit import Timer
+>>> Timer("t=a;a=b;b=t","a=1;b=2").timeit()
 0.25154118749729365
->>> Timer("a,b=b,a","a=1;b=2").timeit() 
+>>> Timer("a,b=b,a","a=1;b=2").timeit()
 0.17156677734181258
 >>>
 ```

@@ -1,10 +1,10 @@
 ---
-title: Enable HTTPS and CDN with Cloudfront
+title: 使用AWS解锁HTTPS和CDN
 date: 2017-03-20 20:23:37
+categories:
+- 我的博客
 tags: [AWS, Blog, HTTPS, CDN, Cloudfront, Route53, 博客上云]
 ---
-
-# 使用AWS解锁HTTPS和CDN
 
 在上一篇博客中，笔者已经介绍了[将hexo博客发布到S3](https://www.duyidong.com/2017/03/07/Deploy-Hexo-to-S3/)，这一部分我将介绍如何使用AWS的Route53应用上自己的域名，以及如何使用Cloudfront开启HTTPS/HTTP2和CDN加速。
 

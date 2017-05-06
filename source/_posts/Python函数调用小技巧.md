@@ -1,10 +1,11 @@
 ---
 title: Python函数调用小技巧
 date: 2016-04-02 09:54:08
+categories:
+- 学习总结
 tags: Python
 
 ---
-# Python-filter,map,reduce.lambda
 
 python的兴起其中一个不容忽视的因素就是他的简洁和易读，要想写好python代码以下几个方法你不得不知道：
 <!-- more -->

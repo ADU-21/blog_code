@@ -1,12 +1,13 @@
 ---
-title: 一次完整的HTTP事务是怎样一个过程？
+title: 一次完整的HTTP事务是怎样一个过程
 date: 2016-04-17 11:35:37
+categories:
+- 学习总结
 tags: HTTP
 ---
 
-# 一次完整的HTTP事务是怎样一个过程
 当我们在浏览器的地址栏输入 www.linux178.com ，然后回车，回车这一瞬间到看到页面到底发生了什么呢？
-
+<!-- more -->
 以下过程仅是个人理解：
 
 域名解析 --> 发起TCP的3次握手 --> 建立TCP连接后发起http请求 --> 服务器响应http请求，浏览器得到html代码 --> 浏览器解析html代码，并请求html代码中的资源（如js、css、图片等） --> 浏览器对页面进行渲染呈现给用户
@@ -17,7 +18,7 @@ HTTP协议漫谈  [http://kb.cnblogs.com/page/140611/](http://kb.cnblogs.com/pag
 HTTP协议概览  [http://www.cnblogs.com/vamei/archive/2013/05/11/3069788.html](http://www.cnblogs.com/vamei/archive/2013/05/11/3069788.html)
 
 了解HTTP Headers的方方面面  [http://kb.cnblogs.com/page/55442/](http://kb.cnblogs.com/page/55442/)
-<!-- more -->
+
 
 以下就是上面过程的一一分析，我们就以Chrome浏览器为例：
 
@@ -31,7 +32,7 @@ HTTP协议概览  [http://www.cnblogs.com/vamei/archive/2013/05/11/3069788.html]
 
 ② 如果浏览器自身的缓存里面没有找到对应的条目，那么Chrome会搜索操作系统自身的DNS缓存,如果找到且没有过期则停止搜索解析到此结束.
 
-     注：怎么查看操作系统自身的DNS缓存，以Windows系统为例，可以在命令行下使用 ipconfig /displaydns 来进行查看  
+     注：怎么查看操作系统自身的DNS缓存，以Windows系统为例，可以在命令行下使用 ipconfig /displaydns 来进行查看
 
 ③ 如果在Windows系统的DNS缓存也没有找到，那么尝试读取hosts文件（位于C:\Windows\System32\drivers\etc），看看这里面有没有该域名对应的IP地址，如果有则解析成功。
 
@@ -168,7 +169,7 @@ Cookie           每次请求时都会携带上Cookie以方便服务器端识别
 Host             用来标识请求服务器上的那个虚拟主机，比如Nginx里面可以定义很多
 个虚拟主机
                 那这里就是用来标识要访问那个虚拟主机。
-User-Agent       用户代理，一般情况是浏览器，也有其他类型，如：wget curl 搜索引擎的蜘蛛等    
+User-Agent       用户代理，一般情况是浏览器，也有其他类型，如：wget curl 搜索引擎的蜘蛛等
 ```
 
 条件请求首部：
@@ -257,7 +258,7 @@ index index.html index.htm index.php
 通过这个就能得知网站的首页文件是那个文件，也就是我们在入http://www.linux178.com/ ，nginx就会自动帮我们把index.html（假设首页是index.php 当然是会尝试的去找到该文件，如果没有找到该文件就依次往下找，如果这3个文件都没有找到，那么就抛出一个404错误）加到后面，那么添加之后的URL是/index.php,然后根据后面的配置进行处理
 
 
-``` 
+```
 location ~ .*\.php(\/.*)*$ {
    root /web/echo;
    fastcgi_pass   127.0.0.1:9000;

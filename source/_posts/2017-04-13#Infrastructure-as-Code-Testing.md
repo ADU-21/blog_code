@@ -1,11 +1,14 @@
 ---
 title: 基础设施代码测试
 date: 2017-04-13 13:41:29
+categories:
+- DevOps
 tags:
 - Infrastructure as Code
 - ThoughtWorks技术雷达
 - 基础设施即代码
 - 持续交付
+- Cloud
 ---
 
 在DevOps的文化中有一个已经被广泛认可的概念叫做[基础设施及代码](https://martinfowler.com/bliki/InfrastructureAsCode.html)，意在将基础设施以配置文件的方式纳入版本管理以达到更灵活且便于管理的目的，从而更加适应基础设施频繁变更需求。

@@ -1,7 +1,9 @@
 ---
 title: 将Hexo博客发布到S3
 date: 2017-03-07 17:42:34
-tags: [AWS, S3, Blog, Hexo, 上云]
+categories:
+- 我的博客
+tags: [AWS, S3, Blog, Hexo]
 ---
 
 最近在学习AWS服务，加之两次遇到github.io无法访问的情况，决定将博客迁移到AWS S3上。

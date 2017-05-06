@@ -1,15 +1,18 @@
 ---
 title: CI/CD
 date: 2016-05-19 20:04:35
+categories:
+- 持续交付
 tags: [Agile, DevOps]
 
 ---
-# Agile Development
+## Agile Development
 
 Before we talk about CI and CD， I think we should figure out why we need them, so we have to talk about Agile Development first.
+<!-- more -->
 Agile Development is a set of principles for software development. It was develop to response to changing customer's requirement. As we all know, managers generally desirable to quantify the progress of the development, but quantify of the coding is not easy, the quantify we can only control is the process of the requirment. So we can process a requirement implemented as an iteration cycle of software development.
 For this purpose, they created with CI and CD as the core of agile development.
-<!-- more -->
+
 ## Continuous Integration(CI)
 
 Continuous Integration means you need to integration at least daily, It's a development practice that requires developers to integrate code into a shared repository several times a day."Shared"" means everyone can see what others working on, Frequently compile, test, commit means every times we commit, the code could be running, ideally, every integration should be automated, the unit-test allowing teams to detect problems early. By integration regularly, you can detect errors quickly, and locate them more easily.

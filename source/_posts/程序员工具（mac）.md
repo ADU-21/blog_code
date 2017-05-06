@@ -1,10 +1,12 @@
 ---
 title: 程序员工具（mac）
 date: 2016-03-24 22:26:14
+categories:
+- 工具
 tags: 工具
 ---
 # mac下有关的程序员工具
-
+<!-- more -->
 ## item2
 
 代替苹果自带的终端，好看，而且功能更丰富。
@@ -14,7 +16,7 @@ tags: 工具
 ## Oh-My-Zsh
 
 一款功能更加强大的shell。
-<!-- more -->
+
 自动安装：
 ``` python
 wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh

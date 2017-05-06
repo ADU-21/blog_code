@@ -1,11 +1,13 @@
 ---
-title: AWS well architected framework
+title: AWS认为，什么样的架构是一个良好的架构
 date: 2017-03-23 22:01:23
-tags: [AWS, Cloud Native, 架构, 上云]
+categories:
+- Cloud
+tags: [AWS, Cloud Native, 架构, Cloud]
 ---
-# AWS认为，什么样的架构是一个良好的架构
 
 AWS Well Architected framework，其实是亚马逊的一封[白皮书](https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)，围绕云架构设计的安全性，可靠性，负载，花销，运维（2016年11月加入）五个支柱阐述了一个良好的架构应该遵循什么样的原则，以及一些最佳实践。
+
 亚马逊在云服务届处于世界领先水平，且在十多年的云架构实践中已经积累了相当的经验，该白皮书是对这些经验的一个总结和提炼。不管是对于考试，对于成为一个云架构师，还是对于单纯的学习和了解云服务，都是一份不可多得的好材料。
 下面附上资源地址：[https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf](https://d0.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)
 

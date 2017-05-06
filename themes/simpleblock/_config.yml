@@ -30,7 +30,7 @@ right_menus:
 ## Banners && Widgets
 banners:
   jade: |
-    a(href='https://www.duyidong.com/awsSolutionsArchitect_AE.pdf') AWS认证方案解决架构师证书
+    a(href='https://www.duyidong.com/pdf/awsSolutionsArchitect_AE.pdf') AWS认证方案解决架构师证书
 
 widgets:
   -
