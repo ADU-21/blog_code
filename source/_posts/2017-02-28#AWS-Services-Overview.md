@@ -116,7 +116,7 @@ EFS([Elastic File System](https://aws.amazon.com/efs/))是一个可移动的块�
 
 ## Databases
 
-[AWS Cloud Database](https://aws.amazon.com/products/databases)提供了一系列由AWS帮你管理的数据库服务。
+[AWS Cloud Database](https://aws.amazon.com/products/databases)
 涉及到考试，重点在针对不同的使用场景选择合适的数据库服务，另外非关系型数据库的高性能高伸缩和关系型数据库如何做到高可用，读写分离也常会作为考点。
 
 ### RDS

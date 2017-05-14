@@ -66,7 +66,7 @@ Cloudfront是AWS的CND服务，利用AWS分布在全球的节点服务器（Edge
 
 ### 关于缓存时间
 
-关于S3里的Object在Cloudfront的各节点缓存的时间，默认为24小时，也就是说当我发布一篇新博客，由于主页index.html名字没有变化，只是更新了新版本，我要等到24小时后旧版本过期才能看到新的页面，这对我的小博客来说时间太长了，需要更改这个Cache时间，更改Cache时间有两种方式，一是更改TTL（Time To Live）时间，二是增加```Cache-Control: max-age=[seconds]```的heaeder，关于第二种方式，具体参见[官方文档](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#expiration-individual-objects)，这里我说一下如何更改TTL：
+关于S3里的Object在Cloudfront的各节点缓存的时间，默认为24小时，也就是说当我发布一篇新博客，由于主页```index.html```名字没有变化，只是更新了新版本，我要等到24小时候Edge location中缓存的数据过期才能看到新版本，这对我的小博客来说时间太长了，需要更改这个Cache时间。更改Cache时间有两种方式：一是更改TTL（Time To Live）时间，二是增加```Cache-Control: max-age=[seconds]```的header，关于第二种方式，具体参见[官方文档](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html#expiration-individual-objects)，这里我说一下如何更改TTL：
 进入Distribution的管理员界面，选择**Behaviors**标签，勾选待编辑的Behavior，点选**Edit**
 
 ![](/images/Cloudfront_Distributions_Behaviors.png)
