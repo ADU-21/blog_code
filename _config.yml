@@ -6,7 +6,7 @@
 title: 杜屹东的博客
 subtitle: Cloud & DevOps
 description: 杜屹东的博客
-keywords: 云, AWS, Cloud, DevOps, 持续交付, 敏捷, Python,
+keywords: 云, AWS, Cloud, DevOps, 持续交付, 敏捷, Python
 author: 杜屹东
 language: zh-CN
 timezone:
@@ -16,7 +16,7 @@ timezone:
 url: https://www.duyidong.com
 root: /
 permalink: :year/:month/:day/:title/
-permalink_defaults:
+permalink_defaults: ecFFbGMTXg
 
 # Directory
 source_dir: source
@@ -27,6 +27,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+- CNAME
 
 # Writing
 new_post_name: :year-:month-:day#:title.md # File name of new posts

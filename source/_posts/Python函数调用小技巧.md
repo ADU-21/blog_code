@@ -2,7 +2,7 @@
 title: Python函数调用小技巧
 date: 2016-04-02 09:54:08
 categories:
-- 学习总结
+- Python
 tags: Python
 
 ---

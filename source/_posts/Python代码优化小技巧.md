@@ -2,7 +2,7 @@
 title: Python代码优化小技巧
 date: 2016-03-29 20:26:33
 categories:
-- 学习总结
+- Python
 tags: [Python, 代码]
 ---
 
