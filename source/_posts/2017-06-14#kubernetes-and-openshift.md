@@ -1,11 +1,12 @@
 ---
-title: PaaS 平台 -- Openshift 介绍（一）
+title: PaaS 平台（一） -- Openshift 介绍
 date: 2017-06-14 21:53:00
 categories: Cloud
 tags: 
 - DevOps
 - PaaS
 - Openshift
+- Kubernetes
 - 平台即服务
 ---
 Openshift 是一个基于 Kubernetes 和 Docker 的 PaaS 平台。
