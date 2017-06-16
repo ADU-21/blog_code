@@ -14,6 +14,22 @@ date: 2017-05-04 19:11:28
   - DevOps - 文化组织变革
   - CI/CD - 持续集成与持续交付
 
+## 我参与过的活动
+
+进到 ThoughtWorks 以后公司给了很多机会和平台做一些工作坊或是分享，参与到其中让我获益不少，一次次的磨砺中我的演水平，表达能力都得到了提升。
+
+- 2016 年
+    我所理解的 DevOps
+    [Linux 密室逃脱](https://blog.jimmylv.info/2016-08-17-linux-shell-workshop-note/) 
+    What is a good Feedback?
+    [成都-持续交付大会（CDconf）](http://www.10tiao.com/html/592/201611/2656800753/1.html)
+- 2017年 
+    Docker in Production
+    AWS 认证考试分享
+    [技术雷达宣讲：基础设施代码测试](https://www.duyidong.com/2017/04/13/Infrastructure-as-Code-Testing/)
+    PaaS 平台 -- Openshift Workshop：[Part 1](https://www.duyidong.com/2017/06/14/kubernetes-and-openshift/) [Part 2](https://www.duyidong.com/2017/06/15/kubernetes-infrastructure/)
+    电子科大课程：云上持续交付
+
 ## 工作以外
 
   - 喜欢游泳，散打，羽毛球，摄影爱好者，户外老驴
