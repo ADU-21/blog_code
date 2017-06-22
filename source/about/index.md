@@ -27,7 +27,7 @@ date: 2017-05-04 19:11:28
     Docker in Production
     AWS 认证考试分享
     [技术雷达宣讲：基础设施代码测试](https://www.duyidong.com/2017/04/13/Infrastructure-as-Code-Testing/)
-    PaaS 平台 -- Openshift Workshop：[Part 1](https://www.duyidong.com/2017/06/14/kubernetes-and-openshift/) [Part 2](https://www.duyidong.com/2017/06/15/kubernetes-infrastructure/)
+    PaaS 平台 -- Openshift Workshop：[Part 1](https://www.duyidong.com/2017/06/14/kubernetes-and-openshift/) [Part 2](https://www.duyidong.com/2017/06/15/kubernetes-infrastructure/) [Part 3](https://www.duyidong.com/2017/06/15/openshift-quick-start/)
     电子科大课程：云上持续交付
 
 ## 推荐的书
