@@ -111,21 +111,21 @@ Linux 版：[openshift-origin-client-tools-v3.6.0-alpha.2-3c221d5-linux-64bit.ta
 
 ## 部署一个应用
 
-1. 创建一个项目
+**1** 创建一个项目
 
 ```
 oc new-project [project name]
 ```
 Project 的作用是对 Openshift 的集群中的资源进行隔离。
 
-2. 将一个[官方例子](https://github.com/openshift/nodejs-ex) fork 到自己的账户下，并克隆到本地：
+**2** 将一个[官方例子](https://github.com/openshift/nodejs-ex) fork 到自己的账户下，并克隆到本地：
 
 ```
 git clone https://github.com/<your-github-name>/nodejs-ex.git
 ```
 这里包含了项目所需代码，是一个 NodeJS 的应用，稍后我们将把这个应用部署到 Openshift 上。
 
-3. 创建一个应用
+**3** 创建一个应用
 
 ```
 oc new-app https://github.com/<your-github-name>/nodejs-ex.git
@@ -141,7 +141,7 @@ oc new-app https://github.com/<your-github-name>/nodejs-ex.git
 
 经历以上步骤，一个应用就已经在 Openshift 集群中被创建出来了。
 
-4. 创建 route
+**4** 创建 route
 
 ```
 oc expose svc/nodejs-ex
@@ -150,7 +150,7 @@ oc expose svc/nodejs-ex
 得到执行成功的提示后，执行```oc get route```，就可以用返回的地址访问你的应用了。
 这个时候你会看到在```oc get all```命令中看到有叫做`route`的资源被创建了。
 
-5. 清理资源
+**5** 清理资源
 
 可以看到我们创建的资源都是被打上了 label 的，可以用`oc get all --show-labels=true`查看，删除资源也可以使用标签```oc delete all -l app=nodejs-example```，更粗暴的方式是直接删除整个 project，所有资源都会被清理掉：`oc delete project <project name>`
 
