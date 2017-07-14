@@ -18,7 +18,7 @@ Openshift 是一个基于 Kubernetes 和 Docker 的 PaaS 平台。
 如下图所示，我整理了一个简单的容器历史年表，蓝色箭头表示容器的发展史，红色箭头表示 Openshift 重大事件。
 在 2013年以前，容器还是 OpenVZ，LXC 等虚拟化技术的形态，在 2013年3月，Docker 正式发布开源版本，随即在 Github 中代码提交量盛况空前，打响了容器化技术的第一枪。
 在 Docker 发布之后短短数月的时间，Redhat 就开始了基于 Docker 的 PaaS 平台研发([官网](https://www.openshift.org/)标注是在13年6月 Openshift 就已经在基于 Kubernetes 研发)，并在随后发布的 REHL6.5 中集成了对 Docker的支持，标拉开了业界各大厂商竞相支持 Docker 的序幕。次年，云计算三巨头亚马逊、微软、谷歌相继推出了支持 Docker 的云计算品台。
-2015年7月，谷歌发布了 Kubernetes 的第一个版本，Kubernetes 脱胎于谷歌内部的大规模集群管理工具 Borg，且参与 Kubernetes 项目的早期贡献者正式参与过 Borg 项目的工程师，所以业界基本认同 Kubernetes 的很多概念和架构“代表了谷歌过去十余年设计、构建和管理大规模容器集群经验”的说法。虽然 Kubernest 在容器调度方面表现出众，但他的功能还元不构成一个 PaaS 平台，于是很多厂商开始基于 Kubernetes 开发自己的 PaaS 平台，其中就有目前在国内创业公司被大量使用的 Ranchard，值得注意的是 Ranchard 是在2016年才开始发布第一个版本，而 Openshift 则早在13年就开始基于 Kubernetes 的开发，但目前看来国内市场对 Ranchard 的接受度是远高于 Openshift 的，就使用体验上看，Ranchard 也确实更简单易用。
+2015年7月，谷歌发布了 Kubernetes 的第一个版本，Kubernetes 脱胎于谷歌内部的大规模集群管理工具 Borg，且参与 Kubernetes 项目的早期贡献者正式参与过 Borg 项目的工程师，所以业界基本认同 Kubernetes 的很多概念和架构“代表了谷歌过去十余年设计、构建和管理大规模容器集群经验”的说法。虽然 Kubernest 在容器调度方面表现出众，但他的功能还元不构成一个 PaaS 平台，于是很多厂商开始基于 Kubernetes 开发自己的 PaaS 平台，其中就有目前在国内创业公司被大量使用的 Rancher，值得注意的是 Rancher 是在2016年才开始发布第一个版本，而 Openshift 则早在13年就开始基于 Kubernetes 的开发，但目前看来国内市场对 Ranchard 的接受度是远高于 Openshift 的，就使用体验上看，Rancher 也确实更简单易用。
 今年（2017年）四月份发生了一件引爆容器社区的事，就是 Docker 开源社区版改名为 Moby，此举为 Docker 公司的商业行为，在此不表态，不赘述。
 截止到这边文章发出为止，目前 Moby 的最新版本为 17.3.2(Docker 的版本从1.2之后变更了命名方式直接跳到了17)，Kubernetes 为1.7.0(基本与 Docker 更新保持同步) ，Openshift 则为 3.6.0。
 
