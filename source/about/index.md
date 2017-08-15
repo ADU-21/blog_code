@@ -8,7 +8,7 @@ date: 2017-05-04 19:11:28
 
 ##  目前专注于：
 
-  - Cloud Native - 云解决方案
+- Cloud Native - 云解决方案
   - Serverless - 无服务器架构
   - Fintech - 金融科技
   - DevOps - 文化组织变革
@@ -23,7 +23,11 @@ date: 2017-05-04 19:11:28
     [Linux 密室逃脱](https://blog.jimmylv.info/2016-08-17-linux-shell-workshop-note/) 
     What is a good Feedback?
     [成都-持续交付大会（CDconf）](http://www.10tiao.com/html/592/201611/2656800753/1.html)
+
 - 2017年 
+
+    [FCC 社区](https://www.freecodecamp.org/)活动[DevOps 从理论到实践](https://www.duyidong.com/2017/07/14/what-is-devops/)
+
     Docker in Production
     AWS 认证考试分享
     [技术雷达宣讲：基础设施代码测试](https://www.duyidong.com/2017/04/13/Infrastructure-as-Code-Testing/)
@@ -32,15 +36,15 @@ date: 2017-05-04 19:11:28
 
 ## 推荐的书
 
- - [Docker 容器与容器云](https://item.jd.com/12052716.html) - 浙江大学SEL实验室 著：本书是 Kubernetes 中国核心贡献者所著，对中文读者非常友好，深入浅出地解析了容器原理及容器云的概念、架构、工作流程。对想要详细系统学习容器的同学是本好教材。
- - [Infrastructure as Code](https://www.safaribooksonline.com/library/view/infrastructure-as-code/9781491924334/) - Kief Morris 著：本书作为基础设施即代码的学习。
- - [大型网站技术架构：核心原理与案例分析](https://item.jd.com/11322972.html) - 李智慧 著：本书是参与阿里巴巴基础技术平台开发和www.alibaba.com架构设计的作者写的，很接地气，不需要很多的技术积累也能看懂，核心论点是“网站的架构是演变出来的而不是设计出来的”，对于网站架构设计入门，是本好材料。
- - [持续交付：发布可靠软件的系统方法](https://item.jd.com/10843669.html) - 乔梁 译：本书由一位大民鼎鼎的前TWer翻译，这位咨询师翻译完此书之后就去当了百度的架构师，现在自己成立了咨询公司。作为对持续交付的理解，是一门很好的入门材料。
- - [用户故事与敏捷方法](https://item.jd.com/10080654.html) - 清华大学出版社：此书作为敏捷入门。
+- [Docker 容器与容器云](https://item.jd.com/12052716.html) - 浙江大学SEL实验室 著：本书是 Kubernetes 中国核心贡献者所著，对中文读者非常友好，深入浅出地解析了容器原理及容器云的概念、架构、工作流程。对想要详细系统学习容器的同学是本好教材。
+- [Infrastructure as Code](https://www.safaribooksonline.com/library/view/infrastructure-as-code/9781491924334/) - Kief Morris 著：本书作为基础设施即代码的学习。
+- [大型网站技术架构：核心原理与案例分析](https://item.jd.com/11322972.html) - 李智慧 著：本书是参与阿里巴巴基础技术平台开发和www.alibaba.com架构设计的作者写的，很接地气，不需要很多的技术积累也能看懂，核心论点是“网站的架构是演变出来的而不是设计出来的”，对于网站架构设计入门，是本好材料。
+- [持续交付：发布可靠软件的系统方法](https://item.jd.com/10843669.html) - 乔梁 译：本书由一位大民鼎鼎的前TWer翻译，这位咨询师翻译完此书之后就去当了百度的架构师，现在自己成立了咨询公司。作为对持续交付的理解，是一门很好的入门材料。
+- [用户故事与敏捷方法](https://item.jd.com/10080654.html) - 清华大学出版社：此书作为敏捷入门。
 
 ## 工作以外
 
-  - 喜欢游泳，散打，羽毛球，摄影爱好者，户外老驴
+- 喜欢游泳，散打，羽毛球，摄影爱好者，户外老驴
   - 喜欢[史铁生](http://baike.baidu.com/view/39292.htm), [David Fincher](https://movie.douban.com/celebrity/1012521/) 和 [陈奕迅](http://baike.baidu.com/view/2556.htm)
   - 在剧组和影视公司工作过，曾参与成龙大哥电影[《绝地逃亡》](https://movie.douban.com/subject/24529353/)制作
   - 曾骑行成都-拉萨，成都-北京，海南环岛
