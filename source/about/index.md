@@ -18,21 +18,21 @@ date: 2017-05-04 19:11:28
 
 进到 ThoughtWorks 以后公司给了很多机会和平台做一些工作坊或是分享，参与到其中让我获益不少，一次次的磨砺中我的演讲水平，表达能力都得到了提升。
 
+- 2017年 
+  [FCC 社区](https://www.freecodecamp.org/)活动[DevOps 从理论到实践](https://www.duyidong.com/2017/07/14/what-is-devops/)
+  Docker in Production 
+  AWS 认证考试分享
+  [技术雷达宣讲：基础设施代码测试](https://www.duyidong.com/2017/04/13/Infrastructure-as-Code-Testing/)
+  PaaS 平台 -- Openshift Workshop：[Part 1](https://www.duyidong.com/2017/06/14/kubernetes-and-openshift/) [Part 2](https://www.duyidong.com/2017/06/15/kubernetes-infrastructure/) [Part 3](https://www.duyidong.com/2017/06/15/openshift-quick-start/)
+  电子科大课程：云上持续交付
+  
 - 2016 年
     我所理解的 DevOps
     [Linux 密室逃脱](https://blog.jimmylv.info/2016-08-17-linux-shell-workshop-note/) 
     What is a good Feedback?
     [成都-持续交付大会（CDconf）](http://www.10tiao.com/html/592/201611/2656800753/1.html)
 
-- 2017年 
-
-    [FCC 社区](https://www.freecodecamp.org/)活动[DevOps 从理论到实践](https://www.duyidong.com/2017/07/14/what-is-devops/)
-
-    Docker in Production
-    AWS 认证考试分享
-    [技术雷达宣讲：基础设施代码测试](https://www.duyidong.com/2017/04/13/Infrastructure-as-Code-Testing/)
-    PaaS 平台 -- Openshift Workshop：[Part 1](https://www.duyidong.com/2017/06/14/kubernetes-and-openshift/) [Part 2](https://www.duyidong.com/2017/06/15/kubernetes-infrastructure/) [Part 3](https://www.duyidong.com/2017/06/15/openshift-quick-start/)
-    电子科大课程：云上持续交付
+    ​
 
 ## 推荐的书
 
