@@ -76,7 +76,7 @@ Calculator::calculate;
 > *And if this just calls one method, you can use*
 > **A METHOD REFERENCE**
 
-[一个完整的例子](https://my.oschina.net/luoyezhuifeng/blog/801343) ([原文链接](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html))
+[一个完整的例子](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html) ([中文翻译](https://my.oschina.net/luoyezhuifeng/blog/801343))
 
 **注意：**
 
@@ -387,6 +387,7 @@ Optional 类提供了许多方法用于解决空指针的问题，下面列举�
     System.out.println("The length of the value is: " + value.length());
     
   });
+
   ```
 
 - **orElse**
@@ -405,6 +406,7 @@ Optional 类提供了许多方法用于解决空指针的问题，下面列举�
   //输出：Sanaulla
 
   System.out.println(name.orElse("There is some value!"));
+
   ```
 
 - **orElseGet**
@@ -423,6 +425,7 @@ Optional 类提供了许多方法用于解决空指针的问题，下面列举�
   //输出：Sanaulla
 
   System.out.println(name.orElseGet(() -> "Default Value"));
+
   ```
 
 - **map**
@@ -508,4 +511,3 @@ Nashorn 一个 javascript 引擎。
 > - <http://www.importnew.com/14140.html>
 > - <http://brianway.github.io/2017/03/29/javase-java8/>
 > - <http://www.sczyh30.com/posts/Java/jvm-metaspace/>
-> - ​
