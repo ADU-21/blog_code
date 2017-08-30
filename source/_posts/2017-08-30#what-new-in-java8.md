@@ -54,7 +54,7 @@ lambda 表达式只能引用 final 或 final 局部变量，这就是说不能�
 - 特定类的任意对象的方法引用：它的语法是Class::method
 - 特定对象的方法引用：它的语法是instance::method
 
-For example:
+示例如下:
 
 ```
 // 使用Lambda表达式
@@ -379,9 +379,13 @@ Optional 类提供了许多方法用于解决空指针的问题，下面列举�
 
   ```
   //ifPresent方法接受lambda表达式作为参数。
+
   //lambda表达式对Optional的值调用consumer进行处理。
+
   name.ifPresent((value) -> {
+
     System.out.println("The length of the value is: " + value.length());
+    
   });
   ```
 
@@ -391,10 +395,15 @@ Optional 类提供了许多方法用于解决空指针的问题，下面列举�
 
   ```
   //如果值不为null，orElse方法返回Optional实例的值。
+
   //如果为null，返回传入的消息。
+
   //输出：There is no value present!
+
   System.out.println(empty.orElse("There is no value present!"));
+
   //输出：Sanaulla
+
   System.out.println(name.orElse("There is some value!"));
   ```
 
@@ -404,10 +413,15 @@ Optional 类提供了许多方法用于解决空指针的问题，下面列举�
 
   ```
   //orElseGet与orElse方法类似，区别在于orElse传入的是默认值，
+
   //orElseGet可以接受一个lambda表达式生成默认值。
+
   //输出：Default Value
+
   System.out.println(empty.orElseGet(() -> "Default Value"));
+
   //输出：Sanaulla
+
   System.out.println(name.orElseGet(() -> "Default Value"));
   ```
 
@@ -417,8 +431,11 @@ Optional 类提供了许多方法用于解决空指针的问题，下面列举�
 
   ```
   //map方法执行传入的lambda表达式参数对Optional实例的值进行修改。
+
   //为lambda表达式的返回值创建新的Optional实例作为map方法的返回值。
+
   Optional<String> upperName = name.map((value) -> value.toUpperCase());
+
   System.out.println(upperName.orElse("No value found"));
   ```
 
@@ -444,7 +461,11 @@ JVM 为了方便内存回收将堆内存分为**新生代（Young generation）*
 
 ![](http://www.importnew.com/wp-content/uploads/2012/12/Figure-1-GC-Area-Data-Flow.png)
 
-Java8 移除了 Permanent Generation，取而代之的是一个叫 MetaSpace（元空间） 的内存空间（如下图所示），MetaSpace 使用的是本地内存（Native heap），带来的最大好处是不会再有  [java.lang.OutOfMemoryError: PermGen](http://javaeesupportpatterns.blogspot.com/2011/02/outofmemoryerror-permgen-patterns-part1.html) 的问题，MetaSpace 回根据使用情况自动扩容，其理论最大值即为操作系统所能提供的内存最大值；另外 MetaSpace 的 GC 扫描只会发生在 MetaSpace 达到 MaxMetaspaceSize 设置的上限的时候，减少 GC 扫描次数在一定程度上优化了 JVM 的性能。具体参照：[Java 8: From PermGen to Metaspace](https://dzone.com/articles/java-8-permgen-metaspace)
+Java8 移除了 Permanent Generation，取而代之的是一个叫 MetaSpace（元空间） 的内存空间（如下图所示），MetaSpace 使用的是本地内存（Native heap），带来的最大好处是不会再有  [java.lang.OutOfMemoryError: PermGen](http://javaeesupportpatterns.blogspot.com/2011/02/outofmemoryerror-permgen-patterns-part1.html) 的问题，MetaSpace 回根据使用情况自动扩容，其理论最大值即为操作系统所能提供的内存最大值；另外 MetaSpace 的 GC 扫描只会发生在 MetaSpace 达到 MaxMetaspaceSize 设置的上限的时候，减少 GC 扫描次数在一定程度上优化了 JVM 的性能。
+
+具体参照：[Java 8: From PermGen to Metaspace](https://dzone.com/articles/java-8-permgen-metaspace)
+
+关于 JVM 是什么：[【转】JVM介绍——不得不知的JVM](http://www.jianshu.com/p/28639d7a00fe)
 
 ![](http://static.oschina.net/uploads/space/2014/0329/195605_gspc_1028150.png)
 
@@ -486,3 +507,5 @@ Nashorn 一个 javascript 引擎。
 > - http://www.jianshu.com/p/5b800057f2d8
 > - <http://www.importnew.com/14140.html>
 > - <http://brianway.github.io/2017/03/29/javase-java8/>
+> - <http://www.sczyh30.com/posts/Java/jvm-metaspace/>
+> - ​
