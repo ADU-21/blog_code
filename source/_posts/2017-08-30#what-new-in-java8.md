@@ -19,7 +19,7 @@ Lambda允许把函数作为一个方法的参数（函数作为参数传递进�
 
 形如: ```input -> body ```
 
-在代码中:
+## 在代码中:
 
 ```
 (arg1, arg2...) -> { body }
@@ -263,7 +263,7 @@ Stream 不是集合元素，它不是数据结构并不保存数据，它是有�
 
 ![](https://www.ibm.com/developerworks/cn/java/j-lo-java8streamapi/img001.png)
 
-### Stream 的构造
+### Stream 的构造和转换
 
 **构造流的几种常见方法**
 
@@ -293,7 +293,27 @@ IntStream.range(1, 3).forEach(System.out::println);
 IntStream.rangeClosed(1, 3).forEach(System.out::println);
 ```
 
-### Stream 的转换
+**数值流的转换**
+
+流转换为其它数据结构：
+
+```
+// 1. Array
+String[] strArray1 = stream.toArray(String[]::new);
+
+// 2. Collection
+List<String> list1 = stream.collect(Collectors.toList());
+List<String> list2 = stream.collect(Collectors.toCollection(ArrayList::new));
+Set set1 = stream.collect(Collectors.toSet());
+Stack stack1 = stream.collect(Collectors.toCollection(Stack::new));
+
+// 3. String
+String str = stream.collect(Collectors.joining()).toString();
+```
+
+### 
+
+### Stream 的操作
 
 Stream 的转换分为以下三种操作类型：
 
@@ -312,24 +332,6 @@ Stream 的转换分为以下三种操作类型：
   - 对于一个 terminal 操作，如果它接受的是一个无限大的 Stream，但能在有限的时间计算出结果。
 
   包括：anyMatch、 allMatch、 noneMatch、 findFirst、 findAny、 limit
-
-### Stream 的消费
-
-流转换为其它数据结构：
-
-```
-// 1. Array
-String[] strArray1 = stream.toArray(String[]::new);
-
-// 2. Collection
-List<String> list1 = stream.collect(Collectors.toList());
-List<String> list2 = stream.collect(Collectors.toCollection(ArrayList::new));
-Set set1 = stream.collect(Collectors.toSet());
-Stack stack1 = stream.collect(Collectors.toCollection(Stack::new));
-
-// 3. String
-String str = stream.collect(Collectors.joining()).toString();
-```
 
 ### 注意
 
