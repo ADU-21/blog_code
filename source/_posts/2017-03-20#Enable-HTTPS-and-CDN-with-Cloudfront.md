@@ -20,7 +20,7 @@ Route53是AWS提供的DNS服务，提供常见域名服务，用户可以使用R
 
 ## 关于Cloudfront
 
-Cloudfront是AWS的CND服务，利用AWS分布在全球的节点服务器（Edge Location）缓存用户的访问，用户在第二次访问（或同区域的另一个用户在非首次访问）页面时会直接从节点服务器取到已经缓存的数据，速度会大大加快。
+Cloudfront是AWS的CDN(Content Delivery Network, 内容分发网络)服务，利用AWS分布在全球的节点服务器（Edge Location）缓存用户的访问，用户在第二次访问（或同区域的另一个用户在非首次访问）页面时会直接从节点服务器取到已经缓存的数据，速度会大大加快。
 同理，Cloudfront也可以用于文件上传。
 
 ## 申请Route53和Cloudfront权限
