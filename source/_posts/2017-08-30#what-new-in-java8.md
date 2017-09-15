@@ -1,7 +1,7 @@
 ---
 title: Java 8 新特性
 date: 2017-08-30 10:42:34
-categories: Java
+categories: Coding
 tags:
 - Java
 - 代码

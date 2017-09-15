@@ -1,7 +1,7 @@
 ---
 title: "DevOps 团队交付了什么？"
 date: 2017-06-08 16:38:47
-categories: ThoughtWorks
+categories: DevOps
 tags: 
 - 职场
 - DevOps

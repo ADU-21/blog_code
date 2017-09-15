@@ -1,7 +1,7 @@
 ---
 title: PaaS 平台（二） -- Kubernetes 介绍
 date: 2017-06-15 09:38:41
-categories: Cloud
+categories: Cloud & PaaS
 tags: 
 - DevOps
 - PaaS

@@ -1,7 +1,7 @@
 ---
 title: PaaS 平台（一） -- Openshift 介绍
 date: 2017-06-14 21:53:00
-categories: Cloud
+categories: Cloud & PaaS
 tags: 
 - DevOps
 - PaaS

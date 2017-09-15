@@ -1,7 +1,7 @@
 ---
 title: PaaS 平台（三）-- Openshift 使用
 date: 2017-06-15 18:27:41
-categories: Cloud
+categories: Cloud & PaaS
 tags: 
 - DevOps
 - PaaS
