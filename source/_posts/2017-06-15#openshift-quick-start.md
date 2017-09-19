@@ -158,7 +158,8 @@ oc expose svc/nodejs-ex
 
 
 
-
+> * Reference:
+> * <https://github.com/openshift/origin/blob/master/docs/cluster_up_down.md>
 
 
 
