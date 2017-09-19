@@ -8,11 +8,11 @@ date: 2017-05-04 19:11:28
 
 ##  目前专注于：
 
-- Cloud Native - 云解决方案
-  - Serverless - 无服务器架构
-  - Fintech - 金融科技
-  - DevOps - 文化组织变革
-  - CI/CD - 持续集成与持续交付
+- TDD - 测试驱动开发
+- CI/CD - 持续集成与持续交付
+- Containerize & Micor Service - 容器化和微服务
+- Cloud (IaaS & PaaS & SaaS) - 公有云和私有云
+- Serverless - 无服务器架构
 
 ## 我参与过的活动
 
@@ -46,9 +46,9 @@ date: 2017-05-04 19:11:28
 ## 工作以外
 
 - 喜欢游泳，散打，羽毛球，摄影爱好者，户外老驴
-  - 喜欢[史铁生](http://baike.baidu.com/view/39292.htm), [David Fincher](https://movie.douban.com/celebrity/1012521/) 和 [陈奕迅](http://baike.baidu.com/view/2556.htm)
-  - 在剧组和影视公司工作过，曾参与成龙大哥电影[《绝地逃亡》](https://movie.douban.com/subject/24529353/)制作
-  - 曾骑行成都-拉萨，成都-北京，海南环岛
+- 喜欢[史铁生](http://baike.baidu.com/view/39292.htm), [David Fincher](https://movie.douban.com/celebrity/1012521/) 和 [陈奕迅](http://baike.baidu.com/view/2556.htm)
+- 在剧组和影视公司工作过，曾参与成龙大哥电影[《绝地逃亡》](https://movie.douban.com/subject/24529353/)制作
+- 曾骑行成都-拉萨，成都-北京，海南环岛
 
 ---
 
