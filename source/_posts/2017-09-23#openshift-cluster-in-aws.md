@@ -11,16 +11,20 @@ tags:
 - AWS
 ---
 
-本文介绍如何在 AWS 中搭建一个 Openshift 集群，网上有一些这方面的教程，但不多，且颇为繁琐。本文力求简化操作描述，更加关注在 Openshift 架构理解上。
+本文介绍如何在 AWS 中搭建一个 Openshift 集群。
 
 主要用到的资源：<https://github.com/openshift/openshift-ansible-contrib/tree/master/reference-architecture/aws-ansible>
 
-开始之前你最好对这这些知识点有一定了解：[AWS](https://www.duyidong.com/2017/02/28/AWS-Services-Overview/)([EC2](https://www.duyidong.com/2017/03/15/AWS-EC2/), ELB, [IAM](https://www.duyidong.com/2017/03/06/%E6%B5%85%E8%B0%88AWS-IAM/), [CloudFormation](https://www.duyidong.com/2016/08/02/AWS%E4%B9%8BCloudFormation/))，[Ansible](https://www.duyidong.com/2016/06/15/Ansible%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/)，[Bash](https://www.duyidong.com/2016/08/05/Bash%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%A1/)，同时建议先看看本博客中关于 Openshift 和 Kubernetes 的基础知识：[Part 1](https://www.duyidong.com/2017/06/14/kubernetes-and-openshift/) [Part 2](https://www.duyidong.com/2017/06/15/kubernetes-infrastructure/) [Part 3](https://www.duyidong.com/2017/06/15/openshift-quick-start/)
+开始之前你最好对这这些知识点有一定了解：[AWS](https://www.duyidong.com/2017/02/28/AWS-Services-Overview/) ([EC2](https://www.duyidong.com/2017/03/15/AWS-EC2/), ELB, [IAM](https://www.duyidong.com/2017/03/06/%E6%B5%85%E8%B0%88AWS-IAM/), [CloudFormation](https://www.duyidong.com/2016/08/02/AWS%E4%B9%8BCloudFormation/))，[Ansible](https://www.duyidong.com/2016/06/15/Ansible%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%B0/)，[Bash](https://www.duyidong.com/2016/08/05/Bash%E5%AD%A6%E4%B9%A0%E5%B0%8F%E8%AE%A1/)，同时建议先看看本博客中关于 Openshift 和 Kubernetes 的基础知识：[Part 1](https://www.duyidong.com/2017/06/14/kubernetes-and-openshift/) [Part 2](https://www.duyidong.com/2017/06/15/kubernetes-infrastructure/) [Part 3](https://www.duyidong.com/2017/06/15/openshift-quick-start/)
+
+完整的 Openshift 架构：
+
+![](https://github.com/openshift/openshift-ansible-contrib/raw/master/reference-architecture/aws-ansible/images/arch.jpg)
 
 # 准备
 
-- 使用 Route53 申请一个域名。这里注册为 ```oc-tw.net``` ，后文中出现这个 oc-tw.net 的部分请替换为注册域名。
-- 选择一个至少有 3 个 AZ 的 Region。这里选择为悉尼，Region id（可在console的URL 中获得）为：ap-southeast-2。
+- 使用 Route53 申请一个域名。这里注册为 ```oc-tw.net``` ，后文中出现这个 ```oc-tw.net``` 的部分请替换为注册域名。
+- 选择一个至少有 3 个 AZ 的 Region。这里选择为悉尼，Region id（可在console的 URL 中获得）为：ap-southeast-2。
 
 # 开始
 
@@ -53,7 +57,7 @@ yum -y install python-pip git python2-boto \
                  python-click python-six pyOpenSSL
 ```
 
-## Clone Ansible 脚本
+## 获取 Ansible 脚本
 
 ```
 mkdir -p /usr/share/ansible/openshift-ansible
@@ -65,7 +69,7 @@ git clone https://github.com/openshift/openshift-ansible.git
 cd openshift-ansible-contrib/reference-architecture/aws-ansible/
 ```
 
-## 配置 SSH 
+## 配置 SSH
 
 ```
 vi ~/.ssh/config
@@ -83,8 +87,6 @@ Host bastion
      IdentityFile               /root/.ssh/yidong_sydney.pem  # 保存在本地的 ssh 私钥
 ```
 
-
-
 ## AWS 秘钥对写入环境变量
 
 由于堡垒机需要申请 AWS 资源并取得配置权限，所以需要配置 AWS 秘钥对，这里因为 Ansible 是从环境变量里获得 AWS 秘钥的，所以没有使用 IAM role。
@@ -96,11 +98,13 @@ export AWS_SECRET_ACCESS_KEY=bar
 
 ## 设置 Github OAuth
 
-这里需要使用 github OAuth 完成单点登录，参照[官方文档](https://help.github.com/enterprise/2.10/admin/guides/user-management/using-github-oauth/)，
+这里需要使用 github OAuth 完成单点登录设置，参照[官方文档](https://help.github.com/enterprise/2.10/admin/guides/user-management/using-github-oauth/)。
 
-**Homepage URL** 格式为：https://openshift-master.oc-tw.net （一二级域名替换为注册域名）
+![](/images/Github_OAuth_App.png)
 
-**Authorization callback URL** 格式为：https://openshift-master.oc-tw.net/oauth2callback/github（一二级域名替换为注册域名）
+**Homepage URL** 格式为：<https://openshift-master.oc-tw.net> （一二级域名替换为注册域名）
+
+**Authorization callback URL** 格式为：<https://openshift-master.oc-tw.net/oauth2callback/github>（一二级域名替换为注册域名）
 
 OAuth App 添加完成后将会得到一个 **Client ID** 和一个 **Client Secret**，后面会使用到。
 
@@ -134,63 +138,96 @@ OAuth App 添加完成后将会得到一个 **Client ID** 和一个 **Client Sec
 
 Cloudformation 里的基础设施大致包含：EC2, EIP, SG, ELB,  IAM(User, Role, Policy, AccessKey), VPC(RouteTable, Subnet, Route, InternetGateway, RouteTable), NatGateway。
 
+![](/images/Openshift_Instances.png)
+
 > 注意：这套脚本所启动的集群至少需要 9 个 EC2 instance，（如图所示）从 t2.micro 到 m4.xlarge，在Cloudformation 创建开始后，如果你的账户没有在免费试用期每小时大概会划费 2-3$，具体参见[官方文档](https://aws.amazon.com/ec2/pricing/on-demand/)，注意选择```RHEL```和``你所在的Region``，价格会有差异。
 
 ## Trouble Shooting
 
-Ansible 脚本的运行时间大概在一个小时，有 4000+ 个 Tasks（有的是重复执行），在执行到半个小时的时候遇到报错再来修复着实痛苦。建议在第一次执行的时候就阅读这部分内容，以便提早 fix bug。
+Ansible 脚本的运行时间大概在一个小时，有 4000+ 个 Tasks（有的是重复执行），这里列举一些常见错误并给出解决思路。
 
 ### Anisble 连接不上目标机
 
+形如下图，如果错误中包含连接错误或是 SSH 问题，
+
+![](/images/Ansibe_Trouble_SSH.png)
+
+Repo 里的 Ansible 是通过 SSH 连接配置目标机的，这种情况以下三种原因基本可以覆盖：
+
+1. SSH Config 没写对
+2. Key Pair 有问题
+3. 服务器指纹有问题
+
+排查思路：直接尝试从堡垒机 SSH 到目标机（```ssh <instance name>```这里因为配置了域名解析所以可以直接用 instance name ssh），再根据错误信息排查（可以跟上参数 -vvvv 打印详细日志），如果 SSH 能成功，Ansible 执行也就没有问题。
+
 ### 找不到 Docker 
 
-### 缺少依赖
+形如：
 
-第一次运行脚本会遇到一个报错
+![](/images/Ansible_Trouble_Docker_NotFound.png)
 
-安装Docker:
+是由于 Docker registry 没有配置正确，需要手动到机器上执行 ```yum-config-manager --enable rhui-REGION-rhel-server-extras```，写个 for 循环自动执行：
 
 ```
 all_hosts="master01 master02 master03 app-node01 app-node02 infra-node01 infra-node02 infra-node03"
 for h in $all_hosts; do ssh ec2-user@ose-$h.oc-tw.net 'sudo yum-config-manager --enable rhui-REGION-rhel-server-extras -y'; done
 ```
 
+### 缺少依赖
 
+形如：
 
-https://openshift-master.oc-tw.net/console/
+![](/images/Ansible_Trouble_Dependence.png)
 
-https://registry-console-default.apps.oc-tw.net/
-
-
-
-https://openshift-master.oc-tw.net/console/command-line
-
-oc login https://openshift-master.oc-tw.net --token=bcD3sprC9hjOgopov9VfbHEaBbPK03WQt23MXm-KtGw
-
-oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git
-
-
-
-
-
-
-
-
-
-
-
-
-
-guanging:
+解决思路比较简单，缺什么装什么，比如缺少```httpd-tools```:
 
 ```
-./ose-on-aws.py --region=us-east-2 --keypair=lgm-oc --public-hosted-zone=oc-tw.net --deployment-type=origin --ami=ami-cfdafaaa \
---github-client-secret=6497d7521551c5e98a834c47b1f073e255fafb81 --github-organization=ThoughtWorksInc \
---github-client-id=0997d0f5c18fd096d5f5
+sudo yum install -y httpd-tools
+```
 
-./add-node.py --region=us-east-2 --keypair=lgm-oc --public-hosted-zone=oc-tw.net --deployment-type=origin --ami=ami-cfdafaaa \
+不过有的包可能会麻烦点，需要在网上找一下，比如```python-passlib```:
+
+```
+rpm -Uvh ftp://rpmfind.net/linux/centos/7.4.1708/extras/x86_64/Packages/python-passlib-1.6.5-2.el7.noarch.rpm
+```
+
+# 安装成功
+
+![](/images/Openshift_Install_Success.png)
+
+经过一段时间的运行，脚本跑完的时候也就说明 Openshift 安装成功了，这个时候你可以通过<https://openshift-master.oc-tw.net/console/> 这个连接访问它的 Console 界面，直接使用 GitHub账号登录。
+
+同时一个外部可访问的 Registry 也被创建出来（如图） <https://registry-console-default.apps.oc-tw.net/>
+
+![](/images/Openshift_Registry_Console.png)
+
+查看 Node，登录到其中一台 master node 上执行 ```oc get nodes -o wide```
+
+![](/images/Openshift_Cluster_Nodes.png)
+
+# 命令行登录
+
+使用 Token 登录，可以在 <https://openshift-master.oc-tw.net/console/command-line> 获取登录 Token
+
+```
+oc login https://openshift-master.oc-tw.net --token=bcD3sprC9hjOgopov9VfbHEaBbPK03WQt23MXm-KtGw
+# 尝试创建新 app
+oc new-app centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git
+```
+
+# 更多命令
+
+添加 Node：
+
+```
+./add-node.py --region=us-east-2 --keypair=yidong_sydney --public-hosted-zone=oc-tw.net --deployment-type=origin --ami=ami-ccecf5af \
 --use-cloudformation-facts --subnet-id=subnet-1139825c \
 --node-type=app --shortname=ose-app-node03 --existing-stack=openshift-infra
+```
+
+销毁 Openshift 集群：（也可以直接删除 Cloudformation Stack）
+
+```
 
 ansible-playbook -i inventory/aws/hosts \
     -e 'region=us-east-2 stack_name=openshift-infra ci=true' \
