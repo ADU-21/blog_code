@@ -14,7 +14,7 @@ Kubernetes 的很多概念和架构“代表了谷歌过去十余年设计、构
 # Kubernetes 概念引入
 
 Kubernetes 基于容器引入了许多重要的概念，了解这些概念有助于认知 Kubernetes 是如何工作的。
-以下介绍均为 Kubernetes 中被定义的资源，Kubernetes 架构按照 Restful 架构设计，及遵循：
+以下介绍均为 Kubernetes 中被定义的资源，Kubernetes 架构按照 Restful 架构设计，即遵循：
 
 - 网络上的所有事物都被抽象为资源
 - 每个资源对应一个唯一的资源标识符
