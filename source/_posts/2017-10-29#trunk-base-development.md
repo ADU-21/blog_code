@@ -8,7 +8,7 @@ tags:
 - 持续集成
 ---
 
-最近我和我的所在的团队在翻译一个网站： <https://trunkbaseddevelopment.com/>，主干开发。本文结合笔者的开发经验，来谈一谈项目中用到过的分支模型与使用场景，对主干开发做一个简单的介绍。
+最近我和我的所在的团队在翻译一个网站： <https://trunkbaseddevelopment.com/>主干开发。本文结合笔者的开发经验，谈一谈项目中用到过的分支模型与使用场景，对主干开发做一个简单的介绍。
 
 # Gitflow
 
@@ -38,11 +38,11 @@ Master 分支用于发布，Develop 分支用于存放待发布（不稳定）�
 
 # Github Flow
 
-相比 Gitflow，Github Flow 就要简单很多，介绍可以参考[Github 官方文档](https://guides.github.com/introduction/flow/)，同样在[这篇文章](http://www.ruanyifeng.com/blog/2015/12/git-workflow.html) 中也可以看到中文版。在项目上使用 Github Flow 基本上分支会变成这个样子：
+相比 Gitflow，Github Flow 就要简单很多，介绍可以参考[Github 官方文档](https://guides.github.com/introduction/flow/)，同样在[这篇文章](http://www.ruanyifeng.com/blog/2015/12/git-workflow.html)中也可以看到中文版。在项目上使用 Github Flow 基本上分支会变成这个样子：
 
 ![](/images/githubflow_branches.png)
 
-这种方式明显比 Gitflow 简单了许多，同时也更复合持续集成的思想，以一张故事卡为集成的最小单位，相对来说集成的周期短，反馈的速度也快，能够及早的遇到问题，从而及早的解决问题。
+所有 Story 直接提交到 Feature 分支，再从 Feature 分支发 Pull-Request 到主分支（Master 或 Develop），Pull-Request 是为了方便 Code Review，相比于 Gitflow，这种方式因为省去了一些分支而降低了复杂度，同时也更复合持续集成的思想，以一张故事卡为集成的最小单位，相对来说集成的周期短，反馈的速度也快，能够及早的遇到问题，从而及早的解决问题。
 
 Github flow 的另一个好处在于，可以处理跨团队协作问题。当时的项目是一个多团队共享的基础设施代码库，大部分团队需要同样的功能，就从主库 Fork 一份代码，一旦产品团队产生定制化的需求，就可以在自己的代码库里更改，并向主库发一个 Pull-Request，如果主库的维护团队认为这是一个有通用价值的更改，则会接受合并到主库中。这种方式就既保证了分布式团队拥有代码和主库的同步，又让各团队都可以向主库贡献代码，非常适合多个独立团队工作在一个代码库的情形。
 
@@ -52,7 +52,7 @@ Github flow 的另一个好处在于，可以处理跨团队协作问题。当�
 
 # Trunk Based Development
 
-顺着持续集成的思想，如果我们把上一种分支模型做得再极致一点，我们不要 Feature 分支，或者把 Feature 分支只留在本地；不需要使用 Pull-Request 而是直接 Push 到远程 Master 分支，我们就做到了 Trunk based Development。关于从 GitFlow 到 TBD 的论述，TW 同事尚齐在洞见上有一篇[Gitflow有害论](http://insights.thoughtworkers.org/gitflow-consider-harmful/)值得一读，另外想要了解得更细致可以去到[官网](https://trunkbaseddevelopment.com/)（[中文版](https://cn.trunkbaseddevelopment.com/)），里面详细列举了各种实践和反模式。本文主要就项目上落地过程中遇到的一些问题做个简要的说明。
+顺着持续集成的思想，如果我们把上一种分支模型做得再极致一点，我们不要 Feature 分支，或者把 Feature 分支只留在本地；不需要使用 Pull-Request 而是直接 Push 到远程 Master 分支，我们就做到了 Trunk based Development。（关于从 GitFlow 到 TBD 的论述，TW 同事尚齐在洞见上有一篇[Gitflow有害论](http://insights.thoughtworkers.org/gitflow-consider-harmful/)值得一读，另外想要了解得更细致可以去到[官网](https://trunkbaseddevelopment.com/)（[中文版](https://cn.trunkbaseddevelopment.com/)），里面详细列举了各种实践和反模式。）本文主要就项目上落地过程中遇到的一些问题做个简要的说明。
 
 使用主干开发后，我们的代码库原则上就只能有一个 Master 分支了，所有新功能的提交也都提交到 Master 分支上，没有了分支的代码隔离，测试和解决冲突都变得简单，持续集成也变得稳定了许多，问题也接踵而至，主要有以下三个：
 
@@ -66,7 +66,7 @@ Github flow 的另一个好处在于，可以处理跨团队协作问题。当�
 
 ## 如何避免发布引入未完成 Feature
 
-答案是： Feature Toggle。
+答案是： Feature Toggle。(参照 Martin 的文章进行Well Less well的细化)
 
 既然代码要随时保持可发布，而我们又需要只有一份代码来支持持续集成，在代码库里加一个特性开关来随时打开和关闭新特性是最容易想到的也是最容易被质疑的解决方案。
 
@@ -90,6 +90,8 @@ Feature Toggle 是有成本的，不管是在加 Toggle 的时候的代码设计
 这里指的是比较大规模的重构，无法在一次提交完成，TBD 要求每一次提交都是一个可上线的版本，所以这同时还意味着这个重构无法再一个上线周期内完成。
 
 这种情况，需要在代码设计中增加一个抽象层，保证在重构过程中先不动原来的代码，也不破坏既有功能，类似于蓝绿部署中的负载均衡器的作用，这样的流程就是：
+
+![](/images/TBD_Abstraction_layer.png)
 
 - 在将要被重构的代码逻辑附近引入抽象层然后提交，对所有人可见。如果有需要可以是多个提交，这些提交都不能破坏 build，然后依次 push 到共享代码库。
 
