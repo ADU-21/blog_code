@@ -110,3 +110,5 @@ Feature Toggle 是有成本的，不管是在加 Toggle 的时候的代码设计
 # 一点感受
 
 TBD 还因为被 Google，亚马逊这样的公司采用而闻名，可以参照阮一峰的另篇文章：[谷歌的代码管理](http://www.ruanyifeng.com/blog/2016/07/google-monolithic-source-repository.html)，但并不因此意味着 TBD 就适用于所有场景。即使是是 CICD 已经被广泛接受，也不能称持续交付为软件开发的银弹。技术用的对不对，还是要看上下文。
+
+最后附上 Truk Based Development 的中文网站（还在翻译中）：<https://cn.trunkbaseddevelopment.com/>
