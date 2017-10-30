@@ -66,7 +66,7 @@ Github flow 的另一个好处在于，可以处理跨团队协作问题。当�
 
 ## 如何避免发布引入未完成 Feature
 
-答案是： Feature Toggle。(参照 Martin 的文章进行Well Less well的细化)
+答案是： [Feature Toggle](https://martinfowler.com/articles/feature-toggles.html)。
 
 既然代码要随时保持可发布，而我们又需要只有一份代码来支持持续集成，在代码库里加一个特性开关来随时打开和关闭新特性是最容易想到的也是最容易被质疑的解决方案。
 
@@ -81,7 +81,7 @@ Feature Toggle 是有成本的，不管是在加 Toggle 的时候的代码设计
 - 将 Fix Bug 提交 Cherry Pick 到 Release 分支。
 - 在Release 分支再做一次发布。
 
-线上 Fix 通常都比较紧急。看完这个略显繁琐 Bug Fix 流程，你可能会问，为什么不在 Release 分支直接 Fix，再合并到 Master 分支？
+线上 Fix 通常都比较紧急。看完这个略显繁琐 Bug Fix 流程，你可能会问为什么不在 Release 分支直接 Fix，再合并到 Master 分支？
 
 这样做确实比较符合直觉，但事实是，如果在 Release 分支做 Fix，很可能会忘了 Merge 回 Master，试想深夜两点你做完 Bug Fix 眼看终于上线成功，这时的第一反应就是“终于可以下班了。什么，Merge 回 Master？ 明天再来吧“ 等到第二天你早已把这个事忘得一干二净。而问题要等到下一次上线才会被暴露出来，一旦发现，而这个时候上一次 Release 的人又不在，无疑增加了很多工作量。
 
