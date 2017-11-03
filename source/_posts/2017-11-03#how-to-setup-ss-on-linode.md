@@ -158,5 +158,3 @@ wget --no-check-certificate -qO 'BBR_POWERED.sh' 'https://moeclub.org/attachment
 提示 Success 则表示安装成功，Trouble Shooting 可以参考[这篇文章](https://moeclub.org/2017/06/24/278/)
 
 > 如果你完成了上面所有操作，那么恭喜你，可以享受畅通无阻的翻墙体验了。
-
-# 一点题外话
