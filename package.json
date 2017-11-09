@@ -33,6 +33,6 @@
   },
   "scripts": {
     "build": "hexo clean && hexo g && gulp",
-    "start": "hexo s"
+    "start": "npm run build && hexo s"
   }
 }

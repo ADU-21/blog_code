@@ -22,7 +22,7 @@ menu:
 
 # Sidebar
 widgets:
-  - mypet
+  #- mypet
   - recent_posts
   - category
   - tag
