@@ -2,7 +2,7 @@
 title: 推荐几个学习Python还不错的网站
 date: 2016-03-29 21:16:04
 categories:
-- Coding
+- Python
 tags: [Python, 学习]
 ---
 
