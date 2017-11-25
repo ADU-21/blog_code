@@ -20,6 +20,7 @@ date: 2017-05-04 19:11:28
 
 - 2017年 
 
+  [CD conf](http://www.itdks.com/eventlist/detail/1663)分享话题 [Trun based Developmnet](https://www.duyidong.com/2017/10/29/trunk-base-development/)
   [FCC 社区](https://www.freecodecamp.org/)活动[DevOps 从理论到实践](https://www.duyidong.com/2017/07/14/what-is-devops/)
   Docker in Production Workshop [第一期](https://blog.waterstrong.me/docker-workshop-part1/) [第二期](https://blog.waterstrong.me/docker-workshop-part2/)
   AWS 认证考试分享
