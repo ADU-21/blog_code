@@ -38,6 +38,9 @@ date: 2017-05-04 19:11:28
 
 ## 推荐的书
 
+- [人类简史： 从动物到上帝](https://item.jd.com/12125924.html) -Yuval Noah Harari 著：本书出自一位跨界奇才，你可以看到金融、历史、人文、生物等学科交织联系到一起，很有意思的一本书。
+
+
 - [Docker 容器与容器云](https://item.jd.com/12052716.html) - 浙江大学SEL实验室 著：本书是 Kubernetes 中国核心贡献者所著，对中文读者非常友好，深入浅出地解析了容器原理及容器云的概念、架构、工作流程。对想要详细系统学习容器的同学是本好教材。
 - [Infrastructure as Code](https://www.safaribooksonline.com/library/view/infrastructure-as-code/9781491924334/) - Kief Morris 著：本书作为基础设施即代码的学习。
 - [大型网站技术架构：核心原理与案例分析](https://item.jd.com/11322972.html) - 李智慧 著：本书是参与阿里巴巴基础技术平台开发和[www.alibaba.com](www.alibaba.com)架构设计的作者写的，很接地气，不需要很多的技术积累也能看懂，核心论点是“网站的架构是演变出来的而不是设计出来的”，对于网站架构设计入门，是本好材料。
