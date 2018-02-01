@@ -21,7 +21,7 @@ HTTPS 服务是工作在 SSL/TLS 上 的HTTP。
 4. OpenSSL是TLS/SSL协议的开源实现，提供开发库和命令行程序；
 5. HTTPS是HTTP的加密版，底层使用的加密协议是TLS。
 
-结论：SSL/TLS 是协议，OpenSSL是协议的代码实现。
+结论：SSL/TLS 是协议，OpenSSL是协议的代码实现。Sun HotSpot 的 jdk 中提供了一个叫 keytool 的工具，有和 openssl 差不多的功能。
 
 # 为什么我们需要 HTTPS
 
@@ -123,7 +123,7 @@ Springboot 类似，参照[Spring Boot SSL [https] Example](https://howtodoinjav
 
  
 
-> * Refer: 
+> * Reference: 
 > * <https://yi-love.github.io/blog/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/2017/07/15/https-ca.html>
 > * <http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html>
 > * <https://www.pianyissl.com/support/page/10>
