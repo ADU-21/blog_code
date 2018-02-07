@@ -61,5 +61,6 @@ date: 2017-05-04 19:11:28
 - 邮箱：[duuyidong@gmail.com](mailto:duuyidong@gmail.com)
 - Github: [ADU-21](https://github.com/adu-21)
 - Linkedin: [Yidong Du](https://www.linkedin.com/in/yidong-du-0868b0123/)
+- 微信: ZHV1eWlkb25n
 
 ---
