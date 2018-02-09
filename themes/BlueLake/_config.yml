@@ -76,12 +76,12 @@ baidu_share: false ## 百度分享
 JiaThis_share: ##true ##JiaThis分享
 duoshuo_share: #true ##true 多说分享必须和多说评论一起使用。
 addToAny_share: # AddToAny share. Empty list hides. List items are service name at url. For ex: email for '<a href="https://www.addtoany.com/add_to/email?linkurl=...'
- - twitter
- - baidu
- - facebook
- - google_plus
- - linkedin
- - email
+ # - twitter
+ # - baidu
+ # - facebook
+ # - google_plus
+ # - linkedin
+ # - email
 
 # Analytics
 google_analytics: 'UA-80279850-1' ## Your Google Analytics tracking id, e.g. UA-42025684-2
