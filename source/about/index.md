@@ -7,7 +7,7 @@ date: 2017-05-04 19:11:28
 四川泸州人，现居成都，[ThoughtWorks](https://Thoughtworks.com/)软件工程师/咨询师，[AWS认证方案解决架构师](https://www.duyidong.com/pdf/awsSolutionsArchitect_AE.pdf)。在网络取证，电商，大型金融跨国企业中担任过开发、运维、DevOps等角色，拥有丰富的敏捷团队工作经验。目前专注于改善改进持续交付流程、DevOps、云端架构、微服务及Serverless。
 
 ##  目前专注于：
-- Java 并发编程序 -  JVM 性能优化
+- Java 并发编程 -  JVM 性能优化
 - CI/CD - 持续集成与持续交付
 - Containerize & Micor Service - 容器化和微服务
 - Cloud (IaaS & PaaS & SaaS) - 公有云和私有云
