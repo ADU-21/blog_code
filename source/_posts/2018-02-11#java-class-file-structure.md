@@ -122,7 +122,7 @@ field_info {
 
 Java语法中，接口中的字段默认包含ACC_PUBLIC, ACC_STATIC, ACC_FINAL标识。ACC_FINAL，ACC_VOLATILE不能同时选择等规则。紧跟其后的name_index和descriptor_index是对常量池的引用，分别代表着字段的简单名和方法的描述符。
 
-## 方法表
+## 方法表（Method info）
 
 方法表用于描述类或接口中声明的方法，格式如下：
 
