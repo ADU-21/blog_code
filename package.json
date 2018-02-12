@@ -34,7 +34,7 @@
   "scripts": {
     "build": "hexo clean && hexo g && gulp",
     "start": "npm run build && hexo s",
-    "deploy": "npm run build && hexo d"
+    "deploy": "npm run build && hexo d",
     "s3": "aws s3 sync .deploy_git s3://www.duyidong.com/ --exclude '.git/*'"
   }
 }
