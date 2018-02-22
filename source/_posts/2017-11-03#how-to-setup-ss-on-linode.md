@@ -86,7 +86,7 @@ ssserver -p 8388 -k PassWord -d start # 启动 Shadowsocks, 8388是代理端口�
 
 ## 系统配置
 
-- Mac客户端： [**goAgentX**](/software/GoAgentX.zip) ，解压后放到 ```Application``` 目录里，启动。
+- Mac客户端： [**goAgentX**](https://s3.amazonaws.com/duyidong-archive/software/GoAgentX.zip) ，解压后放到 ```Application``` 目录里，启动。
 - Windows: [**Shadowsocks-4.0.6.zip**](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.0.6/Shadowsocks-4.0.6.zip), 解压后运行。
 
 配置：
@@ -121,11 +121,32 @@ goAgentX 有两种可选项目，一种是全局代理（Global Proxy Model）�
 使用环境变量可以将 Shell 的所有流量转发到代理端口，需要始终生效可以将以下命令加入 ```.xshrc```:
 
 ```
-export http_proxy=http://localhost:<代理端口>
-export https_proxy=https://localhost:<代理端口>
+export ALL_PROXY=socks5://127.0.0.1:<代理端口>
 ```
 
-```ping google.com``` 测试通过。
+```curl -I www.google.com``` 测试通过，但是这种方式需要程序支持 proxy 才行，要想让所有流量都走代理，推荐一款**命令行代理配置神器：[proxychains](https://github.com/rofl0r/proxychains-ng)**，只要在命令行前跟上这个命令，它会劫持本机出去的所有流量转发到 proxy 服务器，不管发送请求的程序支不支持 proxy。安装方式（以 Mac 为例）：
+
+- 开启 Root
+
+  OS X 10.11 后 Root 就是阉割版，最常遇到的问题就是```/usr/bin```目录下的文件没有更改权限，要获得真正的 Root 权限需要重启 Mac，在启动时按住 ```⌘R```，在左上角有一个菜单栏找到**终端**，打开，并执行```csrutil disable```，返回 Success…，再 ```Reboot```，再打开命令行执行```sudo```就有了真正的 Root。
+
+- 接下来安装 proxychains：
+
+  ```bash
+  git clone https://github.com/rofl0r/proxychains-ng.git 
+
+  ./configure --prefix=/usr --sysconfdir=/etc
+
+  make
+
+  sudo make install
+
+  sudo make install-config 
+  ```
+
+  最后一步会看到生成一个 proxychains 的配置文件```/etc/proxychains.conf```，编辑它，将最后一行替换为```socks5  127.0.0.1 <代理端口>```，保存退出。
+
+- 使用的时候在命令行前加上 ```proxychains4```，形如：```proxychains4 curl -I https://www.google.com```，则流量都将会被转发到 proxy 服务器上。值得注意的是，这个工具**只支持 TCP 协议，而 UDP/ICMP 不支持**，常用场景也就是 ```Ping``` 是不能用的。
 
 # 开启 TCP BBR 增强版
 

@@ -78,4 +78,4 @@ tags:
 > * 参考资料:
 > * <https://pivotal.io/cloud-native>
 > * <https://12factor.net/>
-> * <https://www.duyidong.com/pdf/beyond-the-12-factor-app.pdf>
+> * <https://s3.amazonaws.com/duyidong-archive/pdf/beyond-the-12-factor-app.pdf>

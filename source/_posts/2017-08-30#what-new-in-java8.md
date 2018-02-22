@@ -9,7 +9,7 @@ tags:
 
 Java 从 1995年正式发布第一个版本至今已走过 21 个年头，从一开始受人怀疑的慢语言发展为如今通用的健壮语言。笔者 11 年开始接触 Java1.6 到后来转投 Python，再转向云架构，而今因项目需求再次拾起 Java 已经过了两次版本更新，借项目上的机会，将 Java8 的新特性做一个梳理。
 
-[官方文档](http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html)； [PPT](/pdf/What_new_in_java8_yidong.key)
+[官方文档](http://www.oracle.com/technetwork/java/javase/8-whats-new-2157071.html)； [PPT](https://s3.amazonaws.com/duyidong-archive/pdf/What_new_in_java8_yidong.key)
 
 # （一）Programming Language
 
