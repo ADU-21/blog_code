@@ -124,11 +124,11 @@ goAgentX 有两种可选项目，一种是全局代理（Global Proxy Model）�
 export ALL_PROXY=socks5://127.0.0.1:<代理端口>
 ```
 
-```curl -I www.google.com``` 测试通过，但是这种方式需要程序支持 proxy 才行，要想让所有流量都走代理，推荐一款**命令行代理配置神器：[proxychains](https://github.com/rofl0r/proxychains-ng)**，只要在命令行前跟上这个命令，它会劫持本机出去的所有流量转发到 proxy 服务器，不管发送请求的程序支不支持 proxy。安装方式（以 Mac 为例）：
+```curl -I www.google.com``` 测试通过。但是这种方式需要程序支持 proxy 才行，要想让所有流量都走代理，推荐一款**命令行代理配置神器：[proxychains](https://github.com/rofl0r/proxychains-ng)**，只要在命令行前跟上这个命令，它会劫持本机出去的所有流量转发到 proxy 服务器，不管发送请求的程序支不支持 proxy。安装方式（以 Mac 为例）：
 
 - 开启 Root
 
-  OS X 10.11 后 Root 就是阉割版，最常遇到的问题就是```/usr/bin```目录下的文件没有更改权限，要获得真正的 Root 权限需要重启 Mac，在启动时按住 ```⌘R```，在左上角有一个菜单栏找到**终端**，打开，并执行```csrutil disable```，返回 Success…，再 ```Reboot```，再打开命令行执行```sudo```就有了真正的 Root。
+  OS X 10.11 后 Root 就是阉割版，最常遇到的问题就是```/usr/bin```目录下的文件没有更改权限，要获得真正的 Root 权限需要重启 Mac，在启动时按住 ```⌘R```，在左上角菜单栏找到**终端**，打开，并执行```csrutil disable```，返回 Success…，再 ```Reboot```，再打开命令行执行```sudo```就有了真正的 Root。
 
 - 接下来安装 proxychains：
 
@@ -176,6 +176,6 @@ wget --no-check-certificate -qO 'BBR.sh' 'https://moeclub.org/attachment/LinuxSh
 wget --no-check-certificate -qO 'BBR_POWERED.sh' 'https://moeclub.org/attachment/LinuxShell/BBR_POWERED.sh' && chmod a+x BBR_POWERED.sh && bash BBR_POWERED.sh -f v4.11.9
 ```
 
-提示 Success 则表示安装成功，Trouble Shooting 可以参考[这篇文章](https://moeclub.org/2017/06/24/278/)
+提示 Success 则表示安装成功，Trouble Shooting 可以参考[这篇文章](https://moeclub.org/2017/06/24/278/)，以及[禁用Linode ipv6解决Google提示流量异常](http://www.wuce.org/disable-linode-ipv6-solve-google-error/)。
 
 > 如果你完成了上面所有操作，那么恭喜你，可以享受畅通无阻的翻墙体验了。

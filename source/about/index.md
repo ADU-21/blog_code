@@ -4,7 +4,7 @@ date: 2017-05-04 19:11:28
 ---
 
 #  杜屹东 *LukeDu*
-四川泸州人，现居成都，[ThoughtWorks](https://Thoughtworks.com/)软件工程师/咨询师，[AWS认证方案解决架构师](https://www.duyidong.com/pdf/awsSolutionsArchitect_AE.pdf)。在网络取证，电商，大型金融跨国企业中担任过开发、运维、DevOps等角色，拥有丰富的敏捷团队工作经验。目前专注于改善改进持续交付流程、DevOps、云端架构、微服务及Serverless。
+四川泸州人，现居成都，[ThoughtWorks](https://Thoughtworks.com/)软件工程师/咨询师，[AWS认证方案解决架构师](https://s3.amazonaws.com/duyidong-archive/pdf/awsSolutionsArchitect_AE.pdf)。在网络取证，电商，大型金融跨国企业中担任过开发、运维、DevOps等角色，拥有丰富的敏捷团队工作经验。目前专注于改善改进持续交付流程、DevOps、云端架构、微服务及Serverless。
 
 ##  目前专注于：
 - Java 并发编程 -  JVM 性能优化
@@ -18,7 +18,7 @@ date: 2017-05-04 19:11:28
 进到 ThoughtWorks 以后公司给了很多机会和平台做一些工作坊或是分享，参与到其中让我获益不少，一次次的磨砺中我的演讲水平，表达能力都得到了提升。
 
 - 2017年 
-  AWS 成都办公室分享话题 [Serverless 持续交付]() 
+  AWS 成都办公室分享话题《Serverless 持续交付》
   [成都-持续交付大会（CDconf）](http://www.itdks.com/eventlist/detail/1663)分享话题 [Trunk based Developmnet](https://www.duyidong.com/2017/10/29/trunk-base-development/)
   [FCC 社区](https://www.freecodecamp.org/)活动[DevOps 从理论到实践](https://www.duyidong.com/2017/07/14/what-is-devops/)
   Docker in Production Workshop [第一期](https://blog.waterstrong.me/docker-workshop-part1/) [第二期](https://blog.waterstrong.me/docker-workshop-part2/)
