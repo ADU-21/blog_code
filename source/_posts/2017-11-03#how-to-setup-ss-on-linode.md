@@ -179,3 +179,5 @@ wget --no-check-certificate -qO 'BBR_POWERED.sh' 'https://moeclub.org/attachment
 提示 Success 则表示安装成功，Trouble Shooting 可以参考[这篇文章](https://moeclub.org/2017/06/24/278/)，以及[禁用Linode ipv6解决Google提示流量异常](http://www.wuce.org/disable-linode-ipv6-solve-google-error/)。
 
 > 如果你完成了上面所有操作，那么恭喜你，可以享受畅通无阻的翻墙体验了。
+
+在完成以上操作后，如果你还想进一步提升代理体验，请移步本系列第二篇博文：[使用 Kcptun 加速 Shadowsocks](/2018/02/25/kcptun-shadowsocks/)
