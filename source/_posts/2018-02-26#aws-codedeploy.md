@@ -110,6 +110,8 @@ AWS CodeDeploy 提供配置简单的 Blue/Green Deploy 服务，只需要配置 
 
 ![](https://d2908q01vomqb2.cloudfront.net/7719a1c782a1ba91c031a682a0a2f8658209adbf/2017/04/19/codedeployresults.png)
 
+<center>图片来自：[Performing Blue/Green Deployments with AWS CodeDeploy and Auto Scaling Groups](https://aws.amazon.com/blogs/devops/performing-bluegreen-deployments-with-aws-codedeploy-and-auto-scaling-groups/)</center>
+
 # 后记
 
 今年 AWS 发布财报营收已经被微软超越。亚马逊的产品不得不说性能稳定性强大，但是易用性和商业模式上仍不及国内阿里、腾讯的产品，甚至不如 Rancher、Hashicorp 这样一些小公司的产品简洁、易上手。过去的一年在各种 PaaS 的竞争中 AWS 逐渐面临被 IaaS 化的命运，投资数年的 Serverless 因为它的不稳定、不成熟和平台绑定，在过去的几年中鲜有公司真正涉足，大多在观望状态。就我个人的使用体验而言，Serverless 的架构在较复杂的业务场景下对架构会带来非常大的挑战，资费优势也被 AWS 抖机灵的收费方式蚕食殆尽，17 年 AWS 收购 Cloud9 及迅速提升 Developer Tools 板块服务的行为就是想要补足 PaaS 这块短板。
