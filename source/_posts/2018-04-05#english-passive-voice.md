@@ -113,6 +113,14 @@ The man who <u>come from Identity team</u> helped us do the PVT.  （介词 who 
 - **方式状语从句**：as, as if, as though, the way 就像…一样，以...样的方式
   - 注意：美式英语中常用 like 来代替 as if, as though, 但书面语中少用
 
+在掌握了一些稍微复杂的句式之后，一些像是 Native speaker 才会说的英语短语会为你的英文口语增色不少，附上 ThoughtWorks 同事整理的英文词组集合，很有意思：
+
+- [实用英语词组总结](https://starzhou.com/blogs/common_english_phrase)
+- [实用英语词组总结（二）](https://starzhou.com/blogs/common_english_phrase2)
+- [实用英语词组总结（三）](https://starzhou.com/blogs/common_english_phrase3)
+- [实用英语词组总结（四）](https://starzhou.com/blogs/common_english_phrase4)
+- [鼓励打鸡汤短语合集](https://starzhou.com/blogs/how_to_phraze_praise_in_english)
+
 > * References:
 > * [百度百科：从句](https://baike.baidu.com/item/%E4%BB%8E%E5%8F%A5)
 > * [知乎：怎样浅显易懂地解释英语各种从句的逻辑？](https://www.zhihu.com/question/31730389)
