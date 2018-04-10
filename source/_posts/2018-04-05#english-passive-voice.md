@@ -40,7 +40,7 @@ tags:
   - **Ask 要用 of：** I asked a question of John.
   - Rob, deprive, cure, relieve，是授予动词，但约定与 of 连用：He <u>robbed</u> me <u>of</u> my money
 - Provide, furnish, supply 表示“提供”的授予动词，但必须与 with 连用：
-  - He <u>privided</u> me <u>with</u> a lot of money.
+  - He <u>provided</u> me <u>with</u> a lot of money.
   - We supply the three nearby towns <u>with</u> power. 
   - 但宾语倒置时仍然用 to, for: We supply power <u>to</u> the three nearby towns.
 - Make, have, let, get 这四个使役动词只有 make 可以用于被动语态。
