@@ -1,6 +1,6 @@
 ---
 title: 领域驱动设计（DDD）实践
-date: 2018-04-17 19:49:36
+date: 2018-04-23 19:49:36
 categories: 学习总结
 tags:
 - DDD
@@ -173,7 +173,7 @@ public class LoginService {
 
 可以看到领域服务并没有保存登录有关的状态，而是在 User 里记录了 Online，领域服务中也可以调用领域对象的方法完成一些验证、状态更新的操作。
 
-需要注意的是，领域服务不用特别关心实现细节，只用写业务代码， 以创建 Policy 的 PolicyFactoryService 的 createPolicy 为例：
+需要注意的是，领域服务不用特别关心实现细节，只用写业务代码，以创建 Policy 的 PolicyFactoryService 的 createPolicy 为例：
 
 ```java
     public HomePolicy createPolicy(CreateHomePolicyCommand command) {
@@ -273,7 +273,9 @@ user.isPassWordCorrect(password);
 
 ![](/images/ddd_layer_architecture.png)
 
-<center>DDD 分层架构</center>
+<center>**图：DDD 分层架构**</center>
+
+如图所示，应用服务层不必关心技术层返回使用何种标准，只作为领域模型对外暴露接口的服务。在领域模型中有领域服务、聚合根两种模块，业务操作通过领域服务改变聚合根状态实现，状态持久化通过资源库调用底层数据库实现，同样，资源库的调用者也不需要担心持久化的技术细节，需要何种数据库、如何进行存储，都交给 Repository 的内部实现来做。图中的箭头表示的是“领域事件”。
 
 # 领域事件（Domain Event）
 
