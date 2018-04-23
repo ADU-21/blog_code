@@ -166,7 +166,7 @@ public class LoginService {
         User user = userRepository.findByEmail(email).orElseThrow(UserNotExistException::new);
         Boolean loginSuccess = user.isPassWordCorrect(password);
         if(loginSuccess) user.online();
-        return loginSuccess
+        return loginSuccess;
     }
 }
 ```
