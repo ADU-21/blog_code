@@ -1,6 +1,6 @@
 ---
 title: 从 ThoughtWorks 到阿里巴巴
-date: 2018-08-07 14:26:35
+date: 2018-10-24 14:26:35
 categories: ThoughtWorks
 tags:
 - ThoughtWorks
