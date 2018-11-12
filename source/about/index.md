@@ -4,18 +4,22 @@ date: 2017-05-04 19:11:28
 ---
 
 #  杜屹东 *LukeDu*
-四川泸州人，现居成都，[ThoughtWorks](https://Thoughtworks.com/)软件工程师/咨询师，[AWS认证方案解决架构师](https://s3.amazonaws.com/duyidong-archive/pdf/awsSolutionsArchitect_AE.pdf)。在网络取证，电商，大型金融跨国企业中担任过开发、运维、DevOps等角色，拥有丰富的敏捷团队工作经验。目前专注于改善改进持续交付流程、DevOps、云端架构、微服务及Serverless。
+四川泸州人，现居杭州，阿里巴巴高级软件工程师，前[ThoughtWorks](https://Thoughtworks.com/)软件工程师/咨询师，[AWS认证方案解决架构师](https://s3.amazonaws.com/duyidong-archive/pdf/awsSolutionsArchitect_AE.pdf)。在网络取证，电商，大型金融跨国企业中担任过开发、运维、DevOps等角色，拥有丰富的敏捷团队工作经验。目前专注于改善改进持续交付流程、DevOps、云服务、容器化及Serverless。
 
 ##  目前专注于：
 - Java 并发编程 -  JVM 性能优化
 - CI/CD - 持续集成与持续交付
-- Containerize & Micor Service - 容器化和微服务
+- Kubernetes & Micor Service - 容器编排和微服务治理
 - Cloud (IaaS & PaaS & SaaS) - 公有云和私有云
 - Serverless - 无服务器架构
   ​
 ---
 ## 我参与过的活动
 进到 ThoughtWorks 以后公司给了很多机会和平台做一些工作坊或是分享，参与到其中让我获益不少，一次次的磨砺中我的演讲水平，表达能力都得到了提升。
+
+- 2018年
+
+  [领域驱动设计](https://www.duyidong.com/2018/04/23/ddd-key-words/)
 
 - 2017年 
   AWS 成都办公室分享话题《Serverless 持续交付》
