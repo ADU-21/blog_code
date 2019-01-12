@@ -2,7 +2,7 @@
 title: 将Hexo博客发布到S3
 date: 2017-03-07 17:42:34
 categories:
-- 我的博客
+- Amazon Web Services
 tags: [AWS, S3, Blog, Hexo]
 ---
 

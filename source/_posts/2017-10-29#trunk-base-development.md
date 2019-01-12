@@ -1,7 +1,7 @@
 ---
 title: 分支模型与主干开发
 date: 2017-10-29 15:47:20
-categories: 持续交付
+categories: DevOps
 tags:
 - git
 - coding

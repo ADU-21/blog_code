@@ -2,7 +2,7 @@
 title: 使用AWS解锁HTTPS和CDN
 date: 2017-03-20 20:23:37
 categories:
-- 我的博客
+- Amazon Web Services
 tags: [AWS, Blog, HTTPS, CDN, Cloudfront, Route53, 博客上云]
 ---
 

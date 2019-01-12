@@ -2,7 +2,7 @@
 title: CI/CD
 date: 2016-05-19 20:04:35
 categories:
-- 持续交付
+- DevOps
 tags: [Agile, DevOps]
 
 ---

@@ -2,7 +2,7 @@
 title: AWS认为，什么样的架构是一个良好的架构
 date: 2017-03-23 22:01:23
 categories:
-- Cloud & PaaS
+- Amazon Web Services
 tags: [AWS, Cloud Native, 架构, Cloud]
 ---
 
@@ -49,7 +49,7 @@ AWS从五大支柱来判定一个架构设计得是否优秀：
  - 可追溯：保证系统的每一次操作/更改都被记录日志，并对日志进行审查
  - 确保“最小权限原则”：确保每一个资源都被赋予了恰好需要的最小权限，实时审查这些权限，及时清理掉没用的权限
  - 关注在你的系统安全：根据AWS的责任划分模型，关注在用户应该负责的系统安全和数据安全层面
-  ![](https://d0.awsstatic.com/security-center/NewSharedResponsibilityModel.png)
+    ![](https://d0.awsstatic.com/security-center/NewSharedResponsibilityModel.png)
  - 自动化安全最佳实践：使用基于应用层的策略保证安全问题能够被快速修复，例如，创建打好补丁的镜像，然后让所有之后创建的instance使用这个镜像；再例如，对常见安全问题自动响应和自动修复故障
 
 ### 定义

@@ -1,7 +1,7 @@
 ---
 title: 领域驱动设计（DDD）实践
 date: 2018-04-23 19:49:36
-categories: 学习总结
+categories: Java
 tags:
 - DDD
 - Java

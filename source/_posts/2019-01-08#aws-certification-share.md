@@ -1,7 +1,7 @@
 ---
 title: AWS 认证分享
 date: 2019-01-08 23:09:40
-categories: Session
+categories: Amazon Web Services
 tags:
 - AWS
 - 云计算认证
