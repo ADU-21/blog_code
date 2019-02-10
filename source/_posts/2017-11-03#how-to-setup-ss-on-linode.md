@@ -91,7 +91,7 @@ ssserver -p 8388 -k PassWord -d start # 启动 Shadowsocks, 8388是代理端口�
 
 配置：
 
-![](http://7q5cfr.com1.z0.glb.clouddn.com/kxsw3.png)
+![](/images/goagentx-config.jpg)
 
 Windows 和 Mac 的客户端的配置是一样的，原理是把本机从代理端口出去的流量全部转发到 Shadowsocks 服务器，配置五个参数：
 
