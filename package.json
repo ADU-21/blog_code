@@ -35,6 +35,6 @@
     "build": "hexo clean && hexo g && gulp",
     "start": "npm run build && hexo s",
     "deploy": "npm run build && hexo d",
-    "s3": "proxychains4 aws2 s3 sync .deploy_git/ s3://www.duyidong.com/ --exclude '.git/*'"
+    "s3": "~/Tools/proxychains-ng/proxychains4 aws2 s3 sync .deploy_git/ s3://www.duyidong.com/ --exclude '.git/*'"
   }
 }
