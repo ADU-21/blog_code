@@ -1,7 +1,7 @@
 ---
 title: 一个项目的诞生
 date: 2020-02-15 14:31:43
-categories: 学习总结
+categories: 阿里巴巴
 tags: 
 - 小结
 - 工作
