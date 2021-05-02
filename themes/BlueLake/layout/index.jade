@@ -7,7 +7,8 @@ block title
   else
     title= config.title
 block content
-
+  .post
+    本博客已经迁移到新站点: <a href="https://blog.duyidong.com">https://blog.duyidong.com</a>
   for post in page.posts.toArray()
     .post
       h2.post-title
@@ -41,6 +42,6 @@ block content
         a(href=url_for(post.path))= __('Readmore')
 
   include _partial/paginator
-  
+
 block pageOnly
   script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)

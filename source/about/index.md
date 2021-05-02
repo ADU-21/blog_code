@@ -56,6 +56,3 @@ date: 2017-05-04 19:11:28
 - 邮箱：[duuyidong@gmail.com](mailto:duuyidong@gmail.com)
 - Github: [ADU-21](https://github.com/adu-21)
 - Linkedin: [Yidong Du](https://www.linkedin.com/in/yidong-du-0868b0123/)
-- 欢迎加我微信，互相交流一些技术问题：
-  ![](/images/My_Wechat.png)
-
