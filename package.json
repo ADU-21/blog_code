@@ -23,7 +23,7 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-server": "^0.2.2",
     "jade": "^1.11.0",
-    "marked": "^0.3.12"
+    "marked": "^4.0.10"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
